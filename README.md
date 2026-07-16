@@ -1,50 +1,52 @@
-# Research Project Template
+# spread-vs-growth
 
-This repository is a **minimal template for research and data science projects** that combine code, documentation, and a project website.
+This repository supports figures, animations, and longer-running analyses for a talk comparing wildfire spread rate and growth rate.
 
-It includes:
+The working question is:
 
-* a clean project structure (`src`, `data`, `docs`, `tests`, etc.)
-* a documentation website built with **MkDocs + Material**
-* automatic deployment to **GitHub Pages** using GitHub Actions
-* development history files (changelog, roadmap, dev log)
-* an `AGENTS.md` file with guidance for AI coding agents
+> When are wildfire dynamics better understood as spread, and when are they better understood as growth?
 
-The website is built from the `docs/` folder and automatically deployed when changes are pushed.
+The current talk storyboard is **ESA 2026 Fire Metabolism**, a 12-slide sequence that starts from the spread-vs-growth distinction and builds toward a metabolic view of extreme wildfire.
 
----
+## Repository Layout
 
-# Enable the Website
-
-After creating a repository from this template you must enable GitHub Pages once.
-
-1. Go to **Settings → Pages**
-2. Under **Build and deployment**, choose
-   **Source: GitHub Actions**
-
-The site will then deploy automatically on push.
-
-Your site will appear at:
-
-```
-https://<your-username>.github.io/<repository-name>/
+```text
+docs/                 MkDocs website and project notes
+src/spread_vs_growth/ Shared Python helpers for scripts and notebooks
+scripts/              Reproducible figure and animation entry points
+notebooks/            Exploratory work and draft figure development
+data/                 Local data workspace; large contents are ignored
+outputs/              Rendered figures, frames, and animations; ignored by git
+tmp/                  Temporary renders and inspection artifacts; ignored by git
+AGENTS.md             Agent instructions for working in this repository
+PROMPT_LOG.md         Prompt-to-change history for substantive agent work
 ```
 
----
+Large data files, animation frames, and rendered outputs should stay out of git unless they are intentionally curated for the website under `docs/assets/`.
 
-# Preview Locally
+## Setup
 
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
 ```
-pip install mkdocs mkdocs-material
+
+## Preview The Website
+
+```bash
 mkdocs serve
 ```
 
 Then open:
 
-```
+```text
 http://127.0.0.1:8000
 ```
 
----
+The published site is configured for:
 
-Use **"Use this template"** on GitHub to start a new project.
+```text
+https://cu-esiil.github.io/spread-vs-growth/
+```

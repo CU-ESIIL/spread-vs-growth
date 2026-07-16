@@ -1,17 +1,21 @@
 # AGENTS.md
 
+Agent guidance for `spread-vs-growth`, a repository for figures, animations, and longer-running analyses comparing wildfire spread rate and growth rate.
+
 ## Core Operating Contract
 - Treat this repository as the source of truth.
 - Treat the website as a rendered view of repository state.
 - Prefer small, additive, traceable edits.
 - Keep documentation synchronized with code and project structure.
 - Keep the repository minimalist by default.
+- Keep the project focused on the spread-rate versus growth-rate framing for the ESA 2026 Fire Metabolism talk unless the user redirects it.
 
 ## Default Workflow
 - Inspect repository structure before editing.
 - Make the smallest diff that solves the request.
 - Update related docs when behavior, workflows, or outputs change.
 - Update changelog, dev log, or equivalent history files for meaningful changes.
+- Add a concise entry to `PROMPT_LOG.md` for substantive user prompts and the resulting repository changes.
 - Preserve existing structure and historical context.
 - Do not perform destructive rewrites unless explicitly requested.
 
@@ -21,6 +25,13 @@
 - Amend existing docs when possible; do not replace whole files without need.
 - Preserve navigation, readability, and consistency in website changes.
 - Keep default website behavior clean and minimal unless the user asks for more expressive design.
+
+## Figure And Animation Policy
+- Keep source code, prompts, parameters, and decisions in git.
+- Keep large raw data, intermediate outputs, rendered frames, and final heavy animations out of git by default.
+- Promote only curated, web-sized assets into `docs/assets/`.
+- Prefer restartable scripts for long runs, with clear input paths, output paths, seeds, and major parameters near the script entry point.
+- Before introducing external data, document source, access method, format, license, and citation requirements.
 
 ## Testing Policy
 - Assume `tests/` may exist before a full testing framework is defined.
@@ -57,3 +68,4 @@
 
 ## Decision Logging
 - Reflect meaningful structural, architectural, documentation, data-source, or design decisions in changelog, dev log, roadmap, or equivalent history files when appropriate.
+- Use `PROMPT_LOG.md` to preserve the prompt-to-change history of the project.

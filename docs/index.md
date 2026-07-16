@@ -1,31 +1,31 @@
-# basic_OASIS
+# spread-vs-growth
 
-`basic_OASIS` is a lightweight MkDocs + Material starter for clear project documentation. It is designed to stay minimal, readable, and easy to extend.
+This project supports figures, animations, and longer-running analyses for comparing wildfire spread rate and growth rate.
 
-[Explore Examples](examples.md){ .md-button .md-button--primary }
-[View Repository](https://github.com/CU-ESIIL/basic_OASIS){ .md-button }
+[View Storyboard](storyboard.md){ .md-button .md-button--primary }
+[Figure Workflow](workflow.md){ .md-button }
 
 <div class="grid cards" markdown>
 
-- **Code**
+- **Spread**
 
   ---
 
-  Capture setup steps, scripts, and reproducible snippets in one place.
+  Motion through space: fronts, diffusion, advection, and local rate of advance.
 
-- **Data**
-
-  ---
-
-  Document data access, formats, and provenance so work stays transparent.
-
-- **Docs**
+- **Growth**
 
   ---
 
-  Write concise guides that future contributors can quickly understand.
+  Expansion of area, exchange surface, transport networks, and emergent form.
+
+- **Figures**
+
+  ---
+
+  Reproducible static figures, animation frames, and talk-ready rendered outputs.
 
 </div>
 
-!!! note "Template-first by design"
-    This site is intentionally minimal. Start simple, then extend only what your project needs.
+!!! note "Current focus"
+    The first target is the ESA 2026 Fire Metabolism storyboard: explain why extreme wildfire may require growth-rate thinking in addition to spread-rate thinking.

@@ -1,21 +1,19 @@
-site_name: "basic_OASIS"
-site_description: "Minimal project website"
-site_url: "https://cu-esiil.github.io/basic_OASIS/"
+site_name: "spread-vs-growth"
+site_description: "Figures and animations comparing wildfire spread rate and growth rate"
+site_url: "https://cu-esiil.github.io/spread-vs-growth/"
 
-repo_name: "CU-ESIIL/basic_OASIS"
-repo_url: "https://github.com/CU-ESIIL/basic_OASIS"
+repo_name: "CU-ESIIL/spread-vs-growth"
+repo_url: "https://github.com/CU-ESIIL/spread-vs-growth"
 edit_uri: "edit/main/docs/"
 
 nav:
   - Site:
       - Home: index.md
-      - Examples: examples.md
+      - Storyboard: storyboard.md
+      - Workflow: workflow.md
 
 theme:
   name: material
-  logo: assets/esiil_content/esiil_oasis_logo.png
-  favicon: assets/esiil_content/favicon.ico
-  custom_dir: docs/overrides
   features:
     - navigation.sections
     - navigation.top

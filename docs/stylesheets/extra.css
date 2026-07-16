@@ -1,10 +1,10 @@
 /* Central extension point for lightweight, reusable visual tweaks. */
 
 :root {
-  --oasis-accent: #135d7f;
+  --spread-growth-accent: #1f6f8b;
 }
 
-/* Keep homepage hero content a bit more breathable. */
+/* Keep page introductions a bit more breathable. */
 .md-content h1 {
   margin-bottom: 0.5rem;
 }
@@ -16,20 +16,20 @@
 
 /* Subtle polish for Material buttons used across docs. */
 .md-button {
-  border-radius: 999px;
+  border-radius: 0.35rem;
 }
 
-.oasis-hover-button {
+.spread-growth-hover-button {
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.oasis-hover-button:hover {
+.spread-growth-hover-button:hover {
   transform: translateY(-1px);
-  box-shadow: 0 0.3rem 0.9rem rgba(19, 93, 127, 0.22);
+  box-shadow: 0 0.3rem 0.9rem rgba(31, 111, 139, 0.22);
 }
 
 /* Reusable responsive embed wrapper for iframes and maps. */
-.oasis-embed {
+.spread-growth-embed {
   position: relative;
   width: 100%;
   padding-top: 56.25%;
@@ -38,7 +38,7 @@
   box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.12);
 }
 
-.oasis-embed iframe {
+.spread-growth-embed iframe {
   position: absolute;
   inset: 0;
   width: 100%;

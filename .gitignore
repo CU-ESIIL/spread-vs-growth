@@ -49,3 +49,31 @@ rsconnect/
 
 # macOS
 .DS_Store
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Website build artifacts
+dist/
+site/
+
+# Local data and long-running outputs
+data/raw/*
+data/interim/*
+data/processed/*
+outputs/*
+tmp/*
+
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+!outputs/.gitkeep
+!outputs/figures/
+!outputs/figures/.gitkeep
+!outputs/animations/
+!outputs/animations/.gitkeep
+!tmp/.gitkeep
