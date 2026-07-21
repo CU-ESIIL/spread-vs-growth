@@ -9,6 +9,8 @@ Use the repository as the reproducible control layer and keep large generated ar
 | `data/raw/` | Source data and large external inputs | ignored |
 | `data/interim/` | Intermediate tables, rasters, arrays, caches | ignored |
 | `data/processed/` | Analysis-ready derived data | ignored |
+| `external/` | Local clones/builds of external model software | ignored except `.gitkeep` |
+| `outputs/raw/` | Raw outputs from model runs and other heavy workflows | ignored |
 | `outputs/figures/` | Static figure exports | ignored |
 | `outputs/animations/` | Frames, clips, and rendered animations | ignored |
 | `tmp/` | Temporary render checks and scratch artifacts | ignored |
@@ -32,3 +34,8 @@ Use the repository as the reproducible control layer and keep large generated ar
 
 - `scripts/make_side_by_side_video.py` combines the ink diffusion video and slime-mold growth video into one side-by-side, presentation-friendly H.264 MP4 under `outputs/animations/`.
 - `scripts/measure_perimeter_growth.py` samples each source video, traces perimeter polygons, and writes area/perimeter time series, log area-vs-perimeter plots, and visual overlays under `outputs/`.
+- `scripts/run_fire_model_scaling.py` runs Tier-1 fire-model perimeter-area scaling experiments and writes metrics, fitted exponents, figures, and actual-model status logs under `outputs/`.
+- `scripts/make_model_hexbin_plot.py` generates a denser model-output cloud and renders a reference-style log-log hexbin plot under `outputs/figures/`.
+- `scripts/animate_grass_fire_two_thirds.py` calibrates and renders a reproducible shallow grass-fire animation with perimeter-area scaling near `P proportional to A^(2/3)`.
+
+The first real ELMFIRE constant-wind tutorial output is archived under `outputs/raw/elmfire_constant_wind/`. Cell2Fire has been cloned under `external/Cell2Fire`, but the native build is currently blocked by missing Boost headers.

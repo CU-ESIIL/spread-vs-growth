@@ -1,0 +1,59 @@
+experiment:
+  name: fire_model_scaling_tier1
+  description: Tier-1 wildfire perimeter-area scaling experiments.
+  random_seed: 42
+  output_steps: 18
+  exclude_early_fraction: 0.15
+  max_domain_contact_fraction: 0.0
+
+domain:
+  width: 220
+  height: 220
+  cell_size: 1.0
+  center: [110.0, 110.0]
+
+initial_shapes:
+  - compact
+  - irregular
+  - line
+
+scenarios:
+  - name: isotropic
+    spread_rate: 1.0
+    wind_factor: 1.0
+    direction_degrees: 0.0
+    heterogeneity: 0.0
+  - name: constant_wind
+    spread_rate: 1.0
+    wind_factor: 1.8
+    direction_degrees: 35.0
+    heterogeneity: 0.0
+  - name: heterogeneous
+    spread_rate: 1.0
+    wind_factor: 1.0
+    direction_degrees: 0.0
+    heterogeneity: 0.35
+    replicates: 3
+  - name: time_varying_direction
+    spread_rate: 1.0
+    wind_factor: 1.5
+    direction_degrees: 0.0
+    turn_degrees_per_step: 22.5
+    heterogeneity: 0.0
+
+models:
+  exact_ellipse:
+    enabled: true
+    axis_ratio: 2.0
+    max_radius: 90.0
+  huygens:
+    enabled: true
+    step_size: 4.0
+    perimeter_samples: 96
+  level_set:
+    enabled: true
+    max_radius: 90.0
+  cellular:
+    enabled: true
+    connectivity: 8
+    max_time: 90.0
