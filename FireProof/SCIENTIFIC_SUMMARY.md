@@ -1,5 +1,11 @@
 # Scientific Summary
 
+This file summarizes the first-stage internal-logic audit. The subsequent
+necessity, identifiability, failure-mode, and empirical-discrimination results
+are summarized in `SECOND_STAGE_SUMMARY.md` and developed in
+`PREDICTIONS.md`, `IDENTIFIABILITY.md`, `FAILURE_MODES.md`, and
+`EMPIRICAL_TESTS.md`.
+
 ## What does the theory actually prove?
 
 - If area and perimeter share a positive characteristic size with exponents `DA` and `Dh`, then eliminating that size gives exponent `Dh/DA`. Under `DA=2` and `Dh=4/3`, the exponent is exactly `2/3`, with an explicit positive coefficient.

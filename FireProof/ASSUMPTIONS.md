@@ -44,3 +44,15 @@
 - The retained state is sufficient for prediction after weather, fuel, suppression, and observation effects.
 
 These are empirical premises or model closures. Formal implication does not validate them.
+
+## Second-stage lifecycle assumptions
+
+| Assumption | Where it enters | Why it is necessary |
+| --- | --- | --- |
+| `eta` is exactly `4(C/F)/(1+C/F)^2` | Closed forcing and reduced peak condition | Without it, `eta(t)` is an independent latent function capable of creating arbitrary additional peaks. |
+| `Amax` is known prospectively | Fuel state and dimensionless system | Retrospective final area is not the same quantity and would leak the outcome into the predictor. |
+| Global solution in the biological state space | Asymptotic extinction | Boundedness and uniform continuity are needed to conclude the growth rate tends to zero. |
+| Positive initial `C` and `F` | No finite-time extinction result | Boundary initial states are already extinct or disconnected. |
+| Active perimeter is independently observed | Recovering `C` from perimeter | Cumulative polygon perimeter contains inactive edge and cannot be assumed equal to `Pa`. |
+| Stable calibrated `k` | Recovering `C=Pa/(kA^(2/3))` | Otherwise only the product `kC` is observed. |
+| Sufficient temporal resolution | Peak-balance test | Derivatives of area and connectivity are unstable under coarse or noisy observations. |

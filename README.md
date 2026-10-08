@@ -67,6 +67,18 @@ bash scripts/audit.sh
 
 The audit contains no `sorry` or `admit`. Its only custom scientific axiom is the explicitly named moving-boundary identity; the claims ledger and scientific interpretation are in `FireProof/CLAIMS_AUDIT.md` and `FireProof/SCIENTIFIC_SUMMARY.md`.
 
+The second-stage adversarial analysis asks which predictions are unique and
+falsifiable. It adds formal peak-balance, dimensionless-regime,
+non-identifiability, and competing-mechanism results plus a deterministic
+750-run stress test. Start with `FireProof/SECOND_STAGE_SUMMARY.md`; the full
+prediction and empirical-test audits are in `FireProof/PREDICTIONS.md` and
+`FireProof/EMPIRICAL_TESTS.md`.
+
+The final synthesis is in `FireProof/SYNTHESIS.md`. Its authoritative model
+specification, manuscript-ready language, evidence hierarchy, and section-level
+SI handoff are `THEORY_CORE.md`, `MANUSCRIPT_CLAIMS.md`,
+`PREDICTION_HIERARCHY.md`, and `SI_REVISION_MAP.md` in the same directory.
+
 ## FIRED Prediction Test
 
 The repository also includes a leakage-resistant retrospective forecast test on published FIRED CONUS+Alaska daily sequences. It calibrates each forecast from the previous four calendar days, selects any free exponent on 2001-2015 events, and reports final performance only on held-out 2016-2020 events.

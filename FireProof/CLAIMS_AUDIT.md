@@ -55,6 +55,31 @@ Statuses use the requested vocabulary. “Additional assumptions” means assump
 | S87 completed chain | Multiple modules | PROVED WITH ADDITIONAL ASSUMPTIONS | Mix of definitions, named axiom, closures, and empirical premises | Layered | The chain's links do not share one evidential status. |
 | “Wildfire is metabolic” | - | EMPIRICAL | Independent geometry, consumption, power, and prediction evidence | Scientific hypothesis | Lean proves only internal consequences of supplied premises. |
 
+## Second-stage adversarial claims
+
+| SI or narrative claim | Lean theorem / analysis | Status | Assumptions required | Proof type | Scientific interpretation |
+| --- | --- | --- | --- | --- | --- |
+| `M'=0` exactly when the logarithmic balance is zero | `Lifecycle.peak_iff_balance_zero` | THEOREM | `M!=0`; valid relative-derivative identity | Algebra | Characterizes a peak candidate; does not guarantee existence or maximality. |
+| Matching gives the reduced peak balance | `Lifecycle.closed_peak_balance` | CONDITIONAL THEOREM | Positive states; differentiability; exact fuel, connectivity, and matching closures | Algebra after calculus identity | Produces a prospective sign test only if latent states are independently available. |
+| The model guarantees initial acceleration | Numerical sweep and `Lifecycle.acceleration_sign_is_balance_sign` | COUNTEREXAMPLE | None beyond admissible parameter choices | Sign analysis and numerical counterexample | 312/750 swept trajectories declined monotonically. |
+| The model guarantees an interior metabolic maximum | Numerical sweep | COUNTEREXAMPLE | Admissible positive initial states | Numerical counterexample | The maximum can occur at ignition or beyond a finite observation horizon. |
+| The model guarantees a unique maximum | Numerical sweep | NUMERICAL RESULT | Closed two-state model on tested grid | Parameter sweep | No multiple peaks found, but uniqueness is not proved. |
+| Extinction occurs in finite time | Differential-inequality analysis | COUNTEREXAMPLE | Smooth closed ODE; positive initial `C,F`; bounded state | Conditional analysis | The unchanged model approaches zero asymptotically; abrupt death requires another process or threshold. |
+| Matching closure reduces forcing to a harmonic form | `MechanismTests.matchedForcing_closed_form` | THEOREM | Positive `C,F` | Algebra | `M/A^(2/3)=beta0[2CF/(C+F)]^2` is a stronger test than exponent fitting. |
+| Growth identifies which side of matching is limiting | `MechanismTests.matchedForcing_symmetric`, `matching_reciprocal_symmetry` | COUNTEREXAMPLE | Positive states | Formal symmetry | Instantaneous growth cannot distinguish `C<F` from `C>F`. |
+| `beta0,C,F,eta` are separately identified from area | `MechanismTests.area_only_product_rescaling` | COUNTEREXAMPLE | Nonzero rescaling | Formal invariance | Area identifies only `beta0CFeta`. |
+| Area plus active perimeter identifies all factors | `MechanismTests.area_perimeter_joint_rescaling` | COUNTEREXAMPLE | Unknown `k`; latent `F,eta` | Formal invariance | It identifies `kC` and `(beta0/k)Feta`, not each factor. |
+| `delta>=1` is extinction dominated | `Dimensionless.no_connectivity_recruitment_of_one_le_delta` | THEOREM | Biological unit square | Ordered algebra | Connectivity cannot increase anywhere, although area may still grow temporarily. |
+| Positive connectivity equilibrium exists for `F>delta` | `Dimensionless.fuel_threshold_for_positive_equilibrium` | THEOREM | `F>0` | Ordered-field algebra | Exact dimensionless threshold for the frozen-fuel subsystem. |
+| `P~A^(2/3)`, `A~t^3`, and `P~t^2` are independent evidence | `MechanismTests.cubic_quadratic_headlines_are_dependent` | COUNTEREXAMPLE | Exact cubic/quadratic parameterization | Algebra | The third exponent follows from the other two. |
+| All three powers uniquely identify fire metabolism | `MechanismTests.kinematic_alternative_all_three` | COUNTEREXAMPLE | Purely kinematic construction | Formal construction | An accelerating characteristic length and rough boundary reproduce all three. |
+| Peak-balance closure predicts held-out fire transitions | - | EMPIRICAL HYPOTHESIS | Independent active boundary, `Amax`, parameters, and held-out data | Prospective empirical test | This is the strongest proposed discrimination test, not yet validated. |
+| Closed forcing is symmetric in coherence and fuel | `MechanismTests.matchedForcing_symmetric` | THEOREM | Positive `C,F` | Algebra | Instantaneous normalized growth cannot identify which side is limiting. |
+| Matching equality maximizes total forcing | `MechanismTests.closedForcing_hasDerivAt_C` | COUNTEREXAMPLE | Positive `C,F` | Formal derivative | `eta` peaks at equality, but `G=CFeta` increases in either state and saturates. |
+| Closed forcing at equality is `s^2` | `MechanismTests.closedForcing_at_match` | THEOREM | `s!=0` | Algebra | Equality is a reference state, not a total-forcing optimum. |
+| Closed forcing is bounded by `CF` | `MechanismTests.matchedForcing_le_product` | THEOREM | Positive `C,F` | Ordered algebra | This is the direct consequence of `eta<=1`. |
+| Peak condition contains no independent `eta'` term after closure | `Dimensionless.peakBalance_eq_transitionBalance` | THEOREM | Positive/nonzero states and exact matching, fuel, and coherence equations | Algebraic reduction | `Psi_d=0` is the compact dimensionless transition surface. |
+
 ## Axiom boundary
 
 The custom scientific axiom set contains exactly `FireProof.Kinematics.boundary_kinematic_identity`. Standard Lean/Mathlib logical axioms may appear in `#print axioms` output; they are not additional wildfire assumptions. No theorem marked `PROVED` depends on the custom kinematics axiom unless it is explicitly a kinematics reduction.

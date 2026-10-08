@@ -46,6 +46,9 @@ lake env lean --run .lake/packages/mathlib/Cache/Main.lean get
 | `Metabolism.lean` | Derived relative/logarithmic derivative decompositions |
 | `Identifiability.lean` | Local-slope formula and the formal `1/2 + 1/6 = 2/3` counterexample |
 | `Units.lean` | Separate type-safe dimensional bookkeeping layer |
+| `Lifecycle.lean` | Exact peak balance, sign logic, and lifecycle counterexamples |
+| `Dimensionless.lean` | Canonical dimensionless fields and analytic connectivity boundaries |
+| `MechanismTests.lean` | Observation-preserving rescalings, matching symmetry, and redundant headline laws |
 | `Audit.lean` | Machine-readable status vocabulary and core claim records |
 
 ## Proof policy
@@ -61,5 +64,24 @@ The human-readable findings are in:
 - `ASSUMPTIONS.md`
 - `COUNTEREXAMPLES.md`
 - `SCIENTIFIC_SUMMARY.md`
+- `PREDICTIONS.md`
+- `IDENTIFIABILITY.md`
+- `FAILURE_MODES.md`
+- `EMPIRICAL_TESTS.md`
+- `SECOND_STAGE_SUMMARY.md`
+- `THEORY_CORE.md`
+- `MANUSCRIPT_CLAIMS.md`
+- `PREDICTION_HIERARCHY.md`
+- `SI_REVISION_MAP.md`
+- `SYNTHESIS.md`
+
+Run the deterministic numerical stress test with the repository environment:
+
+```bash
+../.venv/bin/python scripts/adversarial_lifecycle.py
+```
+
+It writes a 750-run table and JSON summary under `results/`. These outputs are
+explicitly labeled numerical results and are not used as Lean proofs.
 
 No manuscript or existing scientific implementation was modified as part of the formal audit.

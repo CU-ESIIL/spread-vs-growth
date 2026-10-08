@@ -9,4 +9,7 @@ import FireProof.Connectivity
 import FireProof.Metabolism
 import FireProof.Identifiability
 import FireProof.Units
+import FireProof.Lifecycle
+import FireProof.Dimensionless
+import FireProof.MechanismTests
 import FireProof.Audit

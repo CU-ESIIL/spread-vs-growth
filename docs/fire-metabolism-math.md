@@ -32,6 +32,42 @@ The formal audit establishes the conditional algebra behind the `4/3 -> 2/3` sca
 
 See `FireProof/CLAIMS_AUDIT.md`, `FireProof/ASSUMPTIONS.md`, `FireProof/COUNTEREXAMPLES.md`, and `FireProof/SCIENTIFIC_SUMMARY.md` for the claim-level findings.
 
+### Second-stage prediction audit
+
+The second stage tests necessity, uniqueness, structural identifiability, and
+mechanism discrimination rather than repeating the algebra audit. It proves the
+exact metabolic peak balance, derives a three-group dimensionless system,
+formalizes latent-product and matching symmetries, and shows that the three
+headline power laws contain only two independent exponent constraints.
+
+The unchanged closed system was also evaluated on a deterministic 750-case
+dimensionless grid. The sweep is explicitly numerical: it finds monotone
+decline, interior peaks, early connectivity loss, fuel-limited and
+mismatch-limited trajectories, and near-identical area histories with different
+latent connectivity. It does not prove peak uniqueness.
+
+```bash
+cd FireProof
+../.venv/bin/python scripts/adversarial_lifecycle.py
+```
+
+See `FireProof/PREDICTIONS.md`, `FireProof/IDENTIFIABILITY.md`,
+`FireProof/FAILURE_MODES.md`, `FireProof/EMPIRICAL_TESTS.md`, and
+`FireProof/SECOND_STAGE_SUMMARY.md`.
+
+### Authoritative synthesis
+
+`FireProof/THEORY_CORE.md` reduces the construction to two dynamic states and
+separates the generative ODE from its geometric, kinematic, observational, and
+energetic interpretation. `FireProof/MANUSCRIPT_CLAIMS.md` provides calibrated
+claim language, `FireProof/PREDICTION_HIERARCHY.md` ranks tests by mechanism
+specificity, `FireProof/SI_REVISION_MAP.md` maps every SI section to a revision
+action, and `FireProof/SYNTHESIS.md` answers the final scientific questions.
+
+The synthesis adds one important formal distinction: matching efficiency is
+maximized at `C=F`, but the complete forcing `CFeta` is monotone in each
+positive state and saturates rather than peaking at equality.
+
 ## Run The Reproduction
 
 ```bash

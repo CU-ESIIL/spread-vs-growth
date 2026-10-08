@@ -8,3 +8,11 @@ import FireProof
 #print axioms FireProof.Metabolism.metabolic_relative_derivative
 #print axioms FireProof.Identifiability.half_plus_one_sixth_counterexample
 #print axioms FireProof.Kinematics.mean_velocity_reduction
+#print axioms FireProof.Lifecycle.closed_peak_balance
+#print axioms FireProof.Lifecycle.matching_relative_derivative
+#print axioms FireProof.Dimensionless.no_connectivity_recruitment_of_one_le_delta
+#print axioms FireProof.MechanismTests.area_perimeter_joint_rescaling
+#print axioms FireProof.MechanismTests.matchedForcing_closed_form
+#print axioms FireProof.MechanismTests.closedForcing_hasDerivAt_C
+#print axioms FireProof.MechanismTests.cubic_quadratic_headlines_are_dependent
+#print axioms FireProof.Dimensionless.peakBalance_eq_transitionBalance

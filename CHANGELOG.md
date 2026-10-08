@@ -1,5 +1,25 @@
 # Changelog
 
+## 2026-10-08 - Authoritative fire-metabolism theory synthesis
+
+- Reduced the finite-fuel construction to an irreducible two-state system for area and latent coherence, with fuel and matched forcing defined algebraically.
+- Added the canonical forcing `G(C,F)=[2CF/(C+F)]^2`, its symmetry, bounds, limiting behavior, and formal partial derivative.
+- Formalized the dimensionless transition surface with no explicit matching-derivative term and distinguished a stationary metabolic point from a local maximum.
+- Separated generative equations from geometric motivation, boundary kinematics, observation equations, and the independent chemical-power bridge.
+- Added `THEORY_CORE.md`, manuscript-ready claims, a ranked prediction and falsification hierarchy, a section-level SI revision map, and a ten-question final synthesis.
+- Identified that matching efficiency peaks at `C=F` while total matched forcing does not, and that only `A` and `C` are necessary dynamic states.
+- Rebuilt the full Lean project and retained exactly one named custom scientific axiom: the moving-boundary identity.
+
+## 2026-10-08 - Second-stage adversarial prediction audit
+
+- Extended `FireProof/` with formal peak-balance, matching-derivative, dimensionless-regime, structural non-identifiability, matching-symmetry, and competing-mechanism theorems.
+- Proved that the closed matching factor is `CFeta=[2CF/(C+F)]^2`, providing a stronger state-closure prediction than the headline exponents.
+- Proved that the cubic area, quadratic perimeter, and two-thirds perimeter-area laws are algebraically dependent and supplied a non-metabolic kinematic construction reproducing all three.
+- Added a deterministic 750-run sweep of the unchanged dimensionless ODE: 312 monotone-decline trajectories, 412 interior global peaks, 203 early-connectivity-loss cases, and no multiple metabolic peaks on the tested grid.
+- Found a numerical observational twin with area RMSE `9.39e-7` but connectivity RMSE `0.140`, demonstrating severe practical latent-state ambiguity.
+- Added prediction, identifiability, failure-mode, empirical-test, and seven-question scientific summaries with explicit theorem/evidence labels.
+- Identified asymptotic rather than finite-time extinction as a new model prediction and proposed a minimal held-out peak-balance test against conventional spread baselines.
+
 ## 2026-10-08 - Lean formal audit of the SI mathematical kernel
 
 - Added a pinned Lean 4.19.0 + Mathlib 4.19.0 project under `FireProof/` with modules for scaling, growth, kinematics, active boundary, finite fuel, matching, connectivity, metabolism, identifiability, and dimensional bookkeeping.

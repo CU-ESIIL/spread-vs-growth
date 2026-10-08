@@ -463,3 +463,29 @@ This file records substantive user prompts and the repository changes made in re
 - Kept the moving-boundary transport identity as one explicit custom axiom and verified its dependency boundary with `#print axioms`.
 - Added claim-by-claim, assumptions, counterexample, and scientific-interpretation reports that expose where continuity, uniqueness, positivity, or empirical validation is additionally required.
 - Verified the complete project with `lake build` and `bash scripts/audit.sh`; no manuscript or existing scientific implementation was modified.
+
+### Prompt
+
+> Perform a second-stage adversarial analysis of the completed fire-metabolism Lean audit. Determine which new predictions are mathematically necessary and falsifiable; analyze lifecycle guarantees, peak observability, dimensionless regimes, structural identifiability, competing mechanisms, redundant joint predictions, transients versus asymptotics, failure modes, and ranked empirical tests. Extend the formal audit without changing the model.
+
+### Response Summary
+
+- Added Lean modules for the exact metabolic peak balance, matching derivative, dimensionless connectivity boundaries, observation-preserving latent rescalings, matching symmetry, and algebraic dependence among the three headline power laws.
+- Derived the exact closed forcing `CFeta=[2CF/(C+F)]^2` and identified it, together with the connectivity equation and peak-balance sign, as the strongest discriminating prediction.
+- Ran a deterministic 750-case sweep of the unchanged dimensionless system; found 312 monotone-decline cases, 412 interior peaks, 203 early-connectivity-loss cases, and no multiple peaks on the tested finite grid.
+- Demonstrated structural factor non-identifiability and a numerical pair with nearly identical area but materially different connectivity.
+- Added `PREDICTIONS.md`, `IDENTIFIABILITY.md`, `FAILURE_MODES.md`, `EMPIRICAL_TESTS.md`, and `SECOND_STAGE_SUMMARY.md`, and updated the claims and assumptions audits.
+- Identified asymptotic rather than finite-time extinction as a new prediction and specified a minimal held-out state-closure test against conventional spread models.
+
+### Prompt
+
+> Produce a final synthesis pass from the two completed formal-analysis stages: build the irreducible theory, derive and interpret the closed forcing, identify the independent prediction set, state the lifecycle correctly, reduce the peak balance, finalize the dimensionless model and observability map, build a falsification ladder, specify one conceptual figure, provide manuscript-ready claims and an SI revision map, and run a final Lean check without changing the theory.
+
+### Response Summary
+
+- Reduced the generative theory to two dynamic states, `A` and `C`; documented `F`, `r`, `eta`, `M`, active perimeter, and effective velocity as algebraic, observational, or interpretive quantities.
+- Added formal closed-forcing results showing symmetry, the equality value, an upper bound, positive partial derivative, and the distinction between maximum matching efficiency and monotone total forcing.
+- Formalized the dimensionless transition surface `Psi_d=0`, which removes the explicit `eta'` term and controls acceleration sign.
+- Created `THEORY_CORE.md`, `MANUSCRIPT_CLAIMS.md`, `PREDICTION_HIERARCHY.md`, `SI_REVISION_MAP.md`, and `SYNTHESIS.md`.
+- Reviewed all 23 SI sections and assigned exact keep, modify, move, remove, or add actions without rewriting the manuscript.
+- Proposed a single `C-F` phase-plane figure combining the forcing landscape, connectivity nullcline, acceleration-transition contours, and contrasting trajectories.
