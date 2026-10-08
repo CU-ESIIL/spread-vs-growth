@@ -123,3 +123,102 @@ python scripts/animate_fire_contexts_explainer.py
 ```
 
 This reuses the accepted two-thirds fire-growth footprint and renders a flatter perspective explainer across grassland, forest, and WUI ground planes. The default output is `outputs/grass_fire_two_thirds/grass_forest_wui_growth_explainer.mp4`, with a final frame and metadata JSON beside it.
+
+## Mathematical SI reproduction
+
+```bash
+PYTHONPATH=src python scripts/reproduce_si.py
+```
+
+This checks the mathematical companion, reproduces all seven hypothetical Section S19 examples, and generates 15 figures under `outputs/si_reproduction/`. Every figure is visibly labeled as analytical, synthetic, or hypothetical. Use `--check-only` to run the checks and update the machine-readable report without regenerating figures.
+
+Build the complete computational Supplementary Information as one PDF:
+
+```bash
+PYTHONPATH=src python scripts/build_computational_si_pdf.py
+```
+
+The combined PDF is written to `output/pdf/fire_metabolism_computational_si.pdf` and includes the full mathematical chain, all figures, worked examples, counterexamples, claim ledger, and reproducibility appendix.
+
+## FIRED held-out prediction tests
+
+```bash
+PYTHONPATH=src python scripts/run_fired_prediction_tests.py \
+  --fired-gpkg /path/to/fired_conus-ak_daily_nov2001-march2021.gpkg
+```
+
+This reconstructs gap-free cumulative burned-area sequences from the published FIRED daily product, selects any free exponent on 2001-2015 events, and evaluates one- to three-day forecasts on held-out 2016-2020 events. Outputs are written to `outputs/fired_prediction/`, including compressed sequence and prediction tables, bootstrap summaries, figures, and a source-checksum report.
+
+## FIRED grown-fire outcome validation
+
+```bash
+PYTHONPATH=src python scripts/run_fired_outcome_validation.py
+```
+
+This uses the reconstructed sequences to predict final area and duration from event days 3, 5, and 7. Models are developed on 2001-2012 events, prediction intervals are calibrated on 2013-2015 events, and accuracy is evaluated on untouched 2016-2020 events. Event-level grown-fire descriptors and validation outputs are written to `outputs/fired_outcome_validation/`.
+
+Build the interpreted seven-page validation report:
+
+```bash
+PYTHONPATH=src python scripts/build_fired_prediction_report.py
+```
+
+The report is written to `output/pdf/fired_prediction_validation_report.pdf` and reads every reported value from the machine-readable validation outputs.
+
+## FIRED geometry and life-cycle prediction
+
+Extract cumulative polygon area, total perimeter, exterior perimeter, components, and holes for the eligible FIRED sequences:
+
+```bash
+/opt/homebrew/bin/python3 scripts/extract_fired_geometry_sequences.py \
+  --fired-gpkg /path/to/fired_conus-ak_daily_nov2001-march2021.gpkg
+```
+
+Then test the day-5 acceleration hypothesis and compare area-only, geometry/metabolic, empirical-analog, and phase-calibrated life-cycle forecasts:
+
+```bash
+MPLCONFIGDIR=tmp/matplotlib-cache PYTHONPATH=src \
+  python scripts/run_fired_lifecycle_prediction.py
+```
+
+The workflow preserves development (2001-2012), calibration (2013-2015), and held-out test (2016-2020) partitions. Outputs under `outputs/fired_lifecycle_prediction/` include complete geometry, features, predictions, tuning curves, event outcomes, duration-stratified summaries, QA figures including long-fire failure modes, and a run report.
+
+## FIRED state-survival prediction
+
+```bash
+MPLCONFIGDIR=tmp/matplotlib-cache PYTHONPATH=src \
+  python scripts/run_fired_state_survival.py
+```
+
+This converts endpoint death prediction into a discrete-time terminal-transition hazard conditioned on accelerating, declining, quiescent, and reactivated states. It compares state-only and geometry-plus-state hazards with the existing endpoint models on the same temporal partitions, then exports full death-time distributions, split-conformal 90% intervals, long-fire discrimination, summaries, and QA figures under `outputs/fired_state_survival/`.
+
+## FIRED missing-process tests
+
+Extract the local gridMET time series, then test weather, active-front, and observation-process additions:
+
+```bash
+/opt/homebrew/bin/python3 scripts/extract_fired_gridmet_sequences.py
+MPLCONFIGDIR=tmp/matplotlib-cache PYTHONPATH=src \
+  .venv/bin/python scripts/run_fired_missing_process_tests.py
+```
+
+The held-out comparison preserves the 2001-2012 development, 2013-2015 calibration, and 2016-2020 evaluation split. It compares geometry plus state with a newly burned-boundary proxy, past gridMET weather, both additions, and an explicitly non-operational observed next-day-weather oracle. Retrospective diagnostics test terminal weather changes and sensitivity to the definition of abrupt termination. Outputs are written to `outputs/fired_missing_processes/`.
+
+## Manuscript figure remakes
+
+```bash
+PYTHONPATH=src python scripts/remake_manuscript_figures.py
+```
+
+This rebuilds the four figures in the current *Fire Critter* manuscript and adds a fifth synthetic life-cycle validation panel. Outputs are written to `outputs/manuscript_figures/` as 400-dpi PNG, vector PDF, and SVG files. Figure 4 derives area, active perimeter, metabolic rate, fuel, connectivity, matching efficiency, and edge coupling from the two-thirds closure `dA/dt = beta_0 C F eta A^(2/3)` and a mass-action connectivity equation. The same run exports complete trajectory and forecast CSVs plus a reproducibility manifest.
+
+Use `--dpi`, `--validation-runs`, and `--seed` to change the raster resolution, ensemble size, or deterministic seed.
+
+Build the first-principles Figure 4 proof and validation handoff as one SI-ready PDF:
+
+```bash
+MPLCONFIGDIR=tmp/matplotlib-cache PYTHONPATH=src \
+  python scripts/build_first_principles_si_handoff_pdf.py
+```
+
+The 25-page report is written to `output/pdf/first_principles_fire_life_cycle_si_handoff.pdf`. It contains the complete derivation, canonical parameters and stages, exact closure checks, five QA plots, phase-specific forecast statistics, a 1,000-run robustness and sensitivity analysis, SI-ready Methods and Results text, every notebook code cell, the production model implementation, the QA routines, and the defining tests.

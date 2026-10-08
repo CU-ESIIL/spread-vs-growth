@@ -22,7 +22,9 @@ The current implemented workflow includes an exact ellipse benchmark, a Huygens 
 docs/                 MkDocs website and project notes
 config/               Fire-model scaling experiment configuration
 src/fire_model_scaling/ Tier-1 fire-model scaling workflow
+src/fire_metabolism/  Mathematical SI companion and evidence-boundary APIs
 src/spread_vs_growth/ Shared Python helpers for scripts and notebooks
+FireProof/            Lean 4 + Mathlib formal audit of the SI mathematical kernel
 scripts/              Reproducible figure and animation entry points
 tests/                Geometry, metric, and scaling tests
 notebooks/            Exploratory work and draft figure development
@@ -34,6 +36,95 @@ PROMPT_LOG.md         Prompt-to-change history for substantive agent work
 ```
 
 Large data files, animation frames, and rendered outputs should stay out of git unless they are intentionally curated for the website under `docs/assets/`.
+
+## Mathematical SI Companion
+
+The `fire_metabolism` package reproduces the mathematical Supplementary Information as identities, conditional derivations, explicit constructions, counterexamples, and hypothetical worked examples. It deliberately does not treat passing algebra or numerical tests as evidence that wildfire has a `2/3` perimeter-area exponent or that wildfire is metabolic.
+
+Run the full reproduction:
+
+```bash
+PYTHONPATH=src python scripts/reproduce_si.py
+```
+
+Run checks without regenerating the 15 figures:
+
+```bash
+PYTHONPATH=src python scripts/reproduce_si.py --check-only
+```
+
+The machine-readable evidence ledger is `claims/fire_metabolism_claims.json`; detailed documentation is in `docs/fire-metabolism-math.md`.
+
+### Lean proof audit
+
+`FireProof/` is a separate Lean 4 + Mathlib project that adversarially checks the SI's mathematical implication chain. It distinguishes definitions, empirical premises, named axioms, proved identities, stronger-assumption results, and false-as-stated inferences.
+
+```bash
+cd FireProof
+lake build
+bash scripts/audit.sh
+```
+
+The audit contains no `sorry` or `admit`. Its only custom scientific axiom is the explicitly named moving-boundary identity; the claims ledger and scientific interpretation are in `FireProof/CLAIMS_AUDIT.md` and `FireProof/SCIENTIFIC_SUMMARY.md`.
+
+## FIRED Prediction Test
+
+The repository also includes a leakage-resistant retrospective forecast test on published FIRED CONUS+Alaska daily sequences. It calibrates each forecast from the previous four calendar days, selects any free exponent on 2001-2015 events, and reports final performance only on held-out 2016-2020 events.
+
+```bash
+PYTHONPATH=src python scripts/run_fired_prediction_tests.py \
+  --fired-gpkg /path/to/fired_conus-ak_daily_nov2001-march2021.gpkg
+```
+
+The raw GeoPackage stays outside git. Source, citation, reuse uncertainty, and product limitations are recorded in `data/fired-source.yml`; method details are in `docs/fired-prediction.md`.
+
+The companion grown-fire validation predicts final area and duration from observations through event days 3, 5, and 7, with a later calibration period and untouched 2016-2020 test events:
+
+```bash
+PYTHONPATH=src python scripts/run_fired_outcome_validation.py
+```
+
+Results and interpretation are documented in `docs/fired-outcome-validation.md`.
+
+The geometry-informed life-cycle workflow then measures cumulative FIRED perimeter and tests later-area, growth-peak, final-area, and death-day predictions using development, calibration, and held-out years:
+
+```bash
+/opt/homebrew/bin/python3 scripts/extract_fired_geometry_sequences.py \
+  --fired-gpkg /path/to/fired_conus-ak_daily_nov2001-march2021.gpkg
+MPLCONFIGDIR=tmp/matplotlib-cache PYTHONPATH=src \
+  python scripts/run_fired_lifecycle_prediction.py
+```
+
+Its day-5 acceleration test and prediction results are documented in `docs/fired-lifecycle-prediction.md`.
+
+The follow-on state-survival experiment treats death as a daily terminal-transition hazard and produces calibrated predictive intervals:
+
+```bash
+MPLCONFIGDIR=tmp/matplotlib-cache PYTHONPATH=src \
+  python scripts/run_fired_state_survival.py
+```
+
+Results are documented in `docs/fired-state-survival.md`.
+
+The current interpretation report can be rebuilt with `scripts/build_fired_prediction_report.py`. The staged next experiment is specified in `MODEL_DISCRIMINATION_AUDIT.md`, with conventional-spread feasibility in `CONVENTIONAL_MODEL_COMPARISON_PLAN.md`.
+
+Rebuild the current manuscript figures as publication-size PNG, PDF, and SVG assets:
+
+```bash
+PYTHONPATH=src python scripts/remake_manuscript_figures.py
+```
+
+This produces four manuscript remakes and a fifth synthetic robustness/prediction diagnostic under `outputs/manuscript_figures/`. The workflow exports all Figure 4 trajectories and Figure 5 forecast records; see `docs/manuscript-figures.md` for the evidentiary labels and interpretation.
+
+The Figure 4 two-thirds metabolic closure is derived and checked step by step in `notebooks/09_first_principles_fire_life_cycle.ipynb`.
+
+Build the complete computational Supplementary Information as one PDF:
+
+```bash
+PYTHONPATH=src python scripts/build_computational_si_pdf.py
+```
+
+The resulting 32-page document is written to `output/pdf/fire_metabolism_computational_si.pdf`.
 
 ## Fire-Model Scaling Workflow
 

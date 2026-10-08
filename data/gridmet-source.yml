@@ -1,0 +1,22 @@
+dataset:
+  name: gridMET daily surface meteorology
+  provider: University of California, Merced
+  method_citation: "Abatzoglou, J. T. (2013), Development of gridded surface meteorological data for ecological applications and modelling, International Journal of Climatology, doi:10.1002/joc.3413"
+  spatial_coverage: contiguous United States
+  nominal_spatial_resolution: approximately 4 km
+  temporal_resolution: daily
+  variables_used:
+    - mean vapor pressure deficit
+    - 10 m wind speed
+    - 100-hour dead fuel moisture
+    - energy release component
+    - precipitation
+  access_method: local annual NetCDF cache originally acquired by the sibling cubedynamics workflow
+  local_cache: ../cubedynamics/artifacts/fire-vase-gridmet-real/gridmet-cache
+  extraction: nearest grid cell at the FIRED final-footprint centroid
+  license_status: reuse terms not independently verified in this repository
+  limitations:
+    - Alaska FIRED events fall outside gridMET coverage and are excluded from weather-complete analyses.
+    - Grid-cell weather does not resolve fire-scale gusts, terrain-channelled winds, or suppression actions.
+    - Daily labels approximately represent days ending at midnight Mountain Standard Time.
+    - Some source assets can be provisional and later replaced.

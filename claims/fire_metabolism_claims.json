@@ -1,0 +1,92 @@
+[
+  {
+    "claim_id": "S12_dimensional_ladder",
+    "type": "identity",
+    "statement": "Similar n-dimensional objects have boundary-content exponent (n-1)/n.",
+    "equation": "S12",
+    "verified_by": ["tests/test_fire_metabolism_geometry.py"],
+    "requires_empirical_data": false
+  },
+  {
+    "claim_id": "S15_boundary_bridge",
+    "type": "conditional_derivation",
+    "statement": "sigma = D_h/D_A when the normalized laws share a compatible size variable.",
+    "equation": "S15",
+    "assumptions": ["shared characteristic size", "compatible scaling range"],
+    "verified_by": ["tests/test_fire_metabolism_scaling.py"],
+    "requires_empirical_data": false
+  },
+  {
+    "claim_id": "S20_right_angle_family",
+    "type": "construction",
+    "statement": "The explicit polygon family has between-size slope 2/3 while each polygon has fine-scale boundary dimension one.",
+    "equation": "S20",
+    "verified_by": ["tests/test_fire_metabolism_geometry.py"],
+    "requires_empirical_data": false
+  },
+  {
+    "claim_id": "S21_boundary_kinematics",
+    "type": "identity",
+    "statement": "Tracked local boundary advance gives dA/dt = integral v_n ds.",
+    "equation": "S21",
+    "verified_by": ["tests/test_fire_metabolism_kinematics.py"],
+    "requires_empirical_data": false
+  },
+  {
+    "claim_id": "S24_candidate_two_thirds",
+    "type": "empirical_hypothesis",
+    "statement": "Wildfire mapped perimeter may exhibit an approximately two-thirds within-event perimeter-area trajectory over a stated range.",
+    "equation": "S24",
+    "verified_by": ["mathematical consequences only"],
+    "requires_empirical_data": true
+  },
+  {
+    "claim_id": "S27_growth_solution",
+    "type": "conditional_prediction",
+    "statement": "Fixed sigma and supplied beta(t) imply the analytic transformed-area solution.",
+    "equation": "S27",
+    "assumptions": ["fixed exponent", "specified beta", "no untracked recruitment"],
+    "verified_by": ["tests/test_fire_metabolism_growth.py"],
+    "requires_empirical_data": false
+  },
+  {
+    "claim_id": "S28_finite_speed_bound",
+    "type": "conditional_bound",
+    "statement": "With bounded local speed and no nonlocal recruitment, area cannot exceed the expanding enclosing disk.",
+    "equation": "S28",
+    "assumptions": ["fixed finite maximum speed", "initial enclosing radius", "no nonlocal recruitment"],
+    "verified_by": ["tests/test_fire_metabolism_growth.py"],
+    "requires_empirical_data": false
+  },
+  {
+    "claim_id": "S44_metabolic_power_scaling",
+    "type": "conditional_prediction",
+    "statement": "Front-associated chemical power inherits the area exponent only if every prefactor is stable and residual power is negligible.",
+    "equation": "S44",
+    "assumptions": ["negligible residual power", "short or modeled residence time", "no untracked recruitment", "fixed sigma", "stable prefactor"],
+    "verified_by": ["tests/test_fire_metabolism_energetics.py"],
+    "requires_empirical_data": true
+  },
+  {
+    "claim_id": "surface_intersection_four_thirds",
+    "type": "conditional_dimensional_model",
+    "statement": "A generic intersection model maps D_s=7/3 to D_trace=4/3; it is not a wildfire theorem.",
+    "verified_by": ["tests/test_fire_metabolism_energetics.py"],
+    "requires_empirical_data": true
+  },
+  {
+    "claim_id": "S59_S68_worked_examples",
+    "type": "hypothetical_regression_check",
+    "statement": "The seven Section S19 examples follow numerically from their stated hypothetical inputs and closures.",
+    "equation": "S59-S68",
+    "verified_by": ["tests/test_fire_metabolism_worked_examples.py"],
+    "requires_empirical_data": false
+  },
+  {
+    "claim_id": "wildfire_is_metabolic",
+    "type": "empirical_hypothesis",
+    "statement": "The proposed coupling describes independently measured wildfire geometry, fuel consumption, and chemical power.",
+    "verified_by": ["not validated by this package"],
+    "requires_empirical_data": true
+  }
+]

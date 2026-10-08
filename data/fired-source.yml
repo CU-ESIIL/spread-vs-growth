@@ -1,0 +1,25 @@
+dataset: FIRED CONUS+AK daily fire progression polygons
+local_expected_path: data/raw/fired/fired_conus-ak_daily_nov2001-march2021.gpkg
+official_record: https://scholar.colorado.edu/concern/datasets/d504rm74m
+official_index: https://github.com/earthlab/firedpy/blob/main/firedpy_master_spreadsheet.csv
+method_doi: https://doi.org/10.3390/rs12213498
+data_descriptor_doi: https://doi.org/10.1038/s41597-022-01572-3
+format: GeoPackage
+temporal_coverage: November 2001 to March 2021 according to the archive filename
+source_product: MODIS MCD64A1 burned area, approximately 500 m
+accessed: 2026-09-27
+license_note: >-
+  CU Scholar is described by the data descriptor as an open-access repository,
+  but the DOI metadata inspected for this run did not expose an explicit data
+  license. Confirm redistribution terms before publishing the raw archive.
+citation_note: >-
+  Cite Balch et al. (2020) for the FIRED method and Mahood et al. (2022) for
+  the 2001-2021 country-level data products.
+known_limitations:
+  - Events are reconstructed from satellite burn dates, not incident-command perimeters.
+  - The product is retrospective and is not a near-real-time operational perimeter feed.
+  - Daily timing and geometry inherit MODIS resolution and burn-date uncertainty.
+  - Natural-vegetation classes do not uniquely identify unplanned wildfires.
+  - Daily land-cover labels can vary within an event; this workflow filters on the area-weighted dominant class while retaining all daily increments.
+  - A small number of event IDs have incomplete daily increments relative to reported final area and are excluded by a 1% reconciliation check.
+  - The FIREDpy repository warns that some Fall 2021 products had a half-pixel shift and missing CRS.

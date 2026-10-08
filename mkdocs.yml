@@ -12,6 +12,15 @@ nav:
       - Storyboard: storyboard.md
       - Workflow: workflow.md
       - Fire Model Scaling: fire-model-scaling.md
+      - FIRED Prediction Test: fired-prediction.md
+      - FIRED Outcome Validation: fired-outcome-validation.md
+      - FIRED Life-Cycle Prediction: fired-lifecycle-prediction.md
+      - FIRED State-Survival Prediction: fired-state-survival.md
+      - FIRED Persistence And Damage: fired-persistence-damage.md
+      - FIRED Potential-To-Realization Gap: fired-realization-gap.md
+      - FIRED Missing-Process Tests: fired-missing-processes.md
+      - Fire Metabolism Mathematics: fire-metabolism-math.md
+      - Manuscript Figure Remakes: manuscript-figures.md
 
 theme:
   name: material

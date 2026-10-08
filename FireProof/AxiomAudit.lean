@@ -1,0 +1,10 @@
+import FireProof
+
+#print axioms FireProof.Scaling.four_thirds_direct_power_law
+#print axioms FireProof.Growth.two_thirds_transformed_solution
+#print axioms FireProof.Matching.eta_unique_global_max
+#print axioms FireProof.Fuel.remaining_mem_unit
+#print axioms FireProof.Connectivity.positiveEquilibrium_pos_iff
+#print axioms FireProof.Metabolism.metabolic_relative_derivative
+#print axioms FireProof.Identifiability.half_plus_one_sixth_counterexample
+#print axioms FireProof.Kinematics.mean_velocity_reduction
