@@ -215,6 +215,18 @@ but does not improve the primary contemporaneous growth-deficit detector.
 Results and exact provenance are under `outputs/final_state_audit/`;
 interpretation is in `docs/FINAL_STATE_SCALE_PREDICTION_AUDIT.md`.
 
+A companion conceptual figure explains the same detection/prediction logic
+without presenting synthetic footprints as empirical performance:
+
+```bash
+MPLCONFIGDIR=tmp/matplotlib-cache PYTHONPATH=src:. \
+  .venv/bin/python scripts/build_detection_prediction_concept_figure.py
+```
+
+It exports an editable PDF/SVG, 600-dpi PNG, caption, and provenance record to
+`outputs/conceptual_detection_prediction/`. Interpretation and evidence
+boundaries are documented in `docs/DETECTION_PREDICTION_CONCEPT_FIGURE.md`.
+
 Build the two empirical manuscript figures directly from those locked
 machine-readable validation outputs:
 

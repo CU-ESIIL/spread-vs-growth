@@ -95,3 +95,8 @@ does not improve with geometry. The separate
 [geometric scale audit](GEOMETRIC_SCALE_AUDIT.md) records which scale
 sensitivities are empirical and why true spatial multi-resolution scaling
 remains unresolved.
+
+The [detection and prediction concept figure](DETECTION_PREDICTION_CONCEPT_FIGURE.md)
+translates that evidence boundary into a publication schematic: realization
+residuals detect a changed trajectory without attributing cause, while mapped
+geometry and recent dynamics narrow rather than determine near-term futures.

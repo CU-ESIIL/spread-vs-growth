@@ -655,3 +655,23 @@ This file records substantive user prompts and the repository changes made in re
 - Added the main and eight SI figure families, machine-readable predictions,
   metrics, bootstrap distributions, complete provenance, final reports, tests,
   documentation navigation, and reproduction instructions.
+
+### Prompt
+
+> Create a publication-ready Python figure, following the supplied two-panel
+> visual concept, that generally explains detection and prediction of fire
+> using the current theory and manuscript context.
+
+### Response Summary
+
+- Added a deterministic Python figure builder with synthetic irregular fire
+  footprints and editable PDF/SVG plus 600-dpi PNG exports.
+- Reframed detection as a realization residual between observed growth and
+  prior-state potential, explicitly separating detection from causal
+  attribution.
+- Reframed prediction as a constrained ensemble: size alone permits broad
+  futures, while mapped geometry and recent dynamics narrow near-term
+  possibilities without determining the realized path.
+- Added the conditional two-state closure, independent-measurement caveats,
+  a manuscript-ready caption, provenance metadata, focused tests, website
+  documentation, and reproduction instructions.

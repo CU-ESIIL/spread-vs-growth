@@ -34,6 +34,7 @@ nav:
       - Final State, Scale, Detection, and Prediction Audit: FINAL_STATE_SCALE_PREDICTION_AUDIT.md
       - Final Manuscript Handoff: FINAL_STATE_SCALE_PREDICTION_MANUSCRIPT_HANDOFF.md
       - Geometric Scale Audit: GEOMETRIC_SCALE_AUDIT.md
+      - Detection And Prediction Concept Figure: DETECTION_PREDICTION_CONCEPT_FIGURE.md
       - Optimal Transport Validation: OPTIMAL_TRANSPORT_VALIDATION.md
       - Integrated Geometry And Transport: INTEGRATED_GEOMETRY_TRANSPORT_VALIDATION.md
       - Latent Constraint Validation: LATENT_CONSTRAINT_VALIDATION.md

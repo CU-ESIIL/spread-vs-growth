@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-10-09 - Detection and prediction conceptual figure
+
+- Added a deterministic two-panel schematic explaining how the theory uses a
+  state-conditioned realization residual for detection and mapped geometry
+  plus recent dynamics for near-term prediction.
+- Distinguished broad same-area futures from narrower state-conditioned
+  futures while retaining independent-data requirements for coherence,
+  reachable fuel, weather, barriers, and suppression.
+- Exported editable PDF/SVG and 600-dpi PNG outputs with a manuscript caption,
+  synthetic-figure provenance, focused tests, and website documentation.
+
 ## 2026-10-09 - Final FIRED state, scale, detection, and prediction audit
 
 - Ran one locked model hierarchy across future area, realized coupling,
