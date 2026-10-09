@@ -1,5 +1,70 @@
 # Changelog
 
+## 2026-10-09 - One-half normalization empirical and formal re-audit
+
+- Inventoried and classified repository one-half results as population laws,
+  fire-conditioned scaling, origin-anchored extrapolation, local-slope
+  shrinkage, temporal area growth, or schematics.
+- Re-ran the locked 4,032-fire geometry comparison with development-locked,
+  calibration-locked, retrospective fire-specific, prospective history-only,
+  and origin-anchored normalization treatments.
+- Found that the population one-half law is worse than two-thirds on
+  independent held-out geometry, that the development exponent near `0.595`
+  is best, and that one-half receives a significantly larger gain from
+  retrospective fire-specific intercept fitting.
+- Quantified normalization drift, area-expansion leverage, long-trajectory
+  discrimination, latent-constraint interactions, and synthetic controls;
+  added complete CSV outputs and a six-panel PDF/SVG/PNG figure.
+- Added a FireProof normalization audit and dependency map plus seven Lean
+  checks for anchoring, candidate ratios, unrestricted-coefficient
+  non-identification, and explicit one-half/two-thirds geometric coefficients.
+- Left all existing core Lean theorem statements and manuscript/SI files
+  unchanged.
+
+## 2026-10-09 - Latent realization and one-half falsification tests
+
+- Added the formal `M_real=B K A^(2/3)` extension, realized-growth bounds,
+  `B*K` identifiability counterexample, bounded-future result, and conditional
+  shock-restoration theorem in Lean.
+- Added origin-safe FIRED potential-growth residuals for all 4,032 fires,
+  prospective deficit-risk models, change-point, termination, OT-timing, and
+  attractor-shock analyses.
+- Found modest prospective deficit-risk skill from geometry, almost no early OT
+  signal, and no long-horizon point-forecast gain from the latent-hazard mixture.
+- Falsified the proposed explanation that deficits make one-half competitive:
+  one-half remains better in near-potential held-out transitions and does not
+  concentrate its advantage in the strongest deficits.
+- Added the detectability matrix, formal audit, required data products, and
+  publication PDF/SVG/high-resolution PNG figures.
+
+## 2026-10-08 - Effective coupling and geometric-attractor validation
+
+- Added an origin-safe effective-coupling pipeline for 4,032 FIRED fires and 54,002 event-days, with model hierarchy, recursive area forecasts, long-horizon and updating-origin checks, acceleration decomposition, and full machine-readable outputs.
+- Found that mapped geometry improves short-horizon observable-coupling prediction and structured propagation modestly improves held-out area forecasts, while calibration does not uniquely select the `2/3` normalization.
+- Added an adversarial geometric-attractor design and full validation with four local-slope estimators, whole-fire bootstrap inference, measurement-error, shuffled-time and random-walk nulls, within-fire separation, long-fire returns, observation robustness, and downstream coupling tests.
+- Found weak negative within-fire slope feedback but rejected a universal `2/3` attractor because the free equilibrium is unstable, measurement error explains stronger apparent reversion, total perimeter reverses the sign, and flexible dynamics predict better.
+- Added publication PDF/SVG/high-resolution PNG figures, scientific reports, design locks, reusable modules, smoke paths, and focused tests.
+
+## 2026-10-08 - Empirical Fire Critter manuscript figures
+
+- Added two publication figures that render the locked FIRED adversarial-validation outputs without refitting detection, forecast, or transition models.
+- Figure 1 combines representative held-out perimeter-area trajectories, day-specific slope distributions, geometric and persistent detection frequencies, and observation-rule sensitivity.
+- Figure 2 combines day-7 held-out area-forecast errors, paired geometry increments, full-geometry versus binary-indicator value, and prospective acceleration prediction.
+- Added a deterministic median-evidence rule for selecting compatible, ambiguous, and inconsistent day-10 trajectories rather than choosing unusually favorable examples.
+- Exported 600-dpi PNG and vector PDF/SVG assets, publication-ready captions, exact plotted source tables, and an input-checksum manifest under `output/manuscript/`.
+- Added focused tests for input availability, locked numerical values, exact reference exponents, past-only trajectory extraction, and deterministic rendering.
+
+## 2026-10-08 - Adversarial Fire Critter detection and prediction validation
+
+- Added a leakage-audited validation pipeline reusing 4,032 cached FIRED event sequences, cumulative geometry, past weather, and the fixed development/calibration/held-out partitions.
+- Added uncertainty-aware geometric detection with fixed `1/2` and `2/3` comparisons, persistence requirements, perimeter-rule and temporal-sampling sensitivity, and topology, size, duration, weather, and ecosystem diagnostics.
+- Found that full origin-time mapped geometry significantly improves held-out area forecasts beyond equally informed recent-dynamics and flexible baselines, while the binary two-thirds detector adds little.
+- Found that fixed two-thirds temporal growth loses to half-power and recent-linear forecasts at every tested horizon; calibration selects `sigma=0` throughout.
+- Added paired held-out acceleration-sign and sign-changing peak-transition tests, probability calibration, whole-event uncertainty, and explicit false-alarm reporting.
+- Confirmed that latent coherence, prospective reachable fuel, abrupt physical termination, energetic metabolism, and event-matched operational-model superiority remain unidentifiable or untested.
+- Added synthetic counterexamples, six publication figures in PDF/SVG/PNG, machine-readable evidence classifications, four scientific validation reports, and an SI claim-by-claim handoff.
+- Added five focused tests plus a deterministic smoke path and verified the full pipeline with 2,000 event-bootstrap replicates.
+
 ## 2026-10-08 - Authoritative fire-metabolism theory synthesis
 
 - Reduced the finite-fuel construction to an irreducible two-state system for area and latent coherence, with fuel and matched forcing defined algebraically.
@@ -87,6 +152,14 @@
 - Added complete prediction, interval, summary, figure, and run-report outputs for 1,164 held-out events.
 
 ## Unreleased
+
+- Added a locked 4,032-fire within-between geometric scaling analysis that separates population (`0.614`), between-fire (`0.646`), and within-fire (`0.594`) perimeter-area exponents with whole-fire bootstrap uncertainty.
+- Added fire-specific and hierarchical random-slope estimates, flexible power-law and lifecycle tests, measurement-error, original-scale, temporal-thinning, and perimeter-definition sensitivities.
+- Added calibrated synthetic manifold reconciliation, normalized-geometry state prediction, algorithmically selected held-out examples, publication figures, a formal Lean dependency audit, and a manuscript handoff without modifying the manuscript or SI.
+
+- Added an integrated real-FIRED geometry and spatial-reorganization experiment with 9,035 transitions, area-matched dilation nulls, balanced and unbalanced transport, simpler spatial competitors, held-out future-coupling and long-horizon forecasts, and publication figures.
+- Added abstract Lean modules proving only the nonnegativity, separating-distance, conditional prediction-set, and generic Lyapunov consequences of reorganization, plus counterexamples showing that R alone does not determine future growth or latent mechanism.
+- Documented that geometric departure predicts R, R does not consistently predict restoration toward `2/3`, and geometry plus OT yields small held-out K gains from five days onward without solving long-range area or death prediction.
 
 - Added a leakage-resistant FIRED prediction workflow using real daily burned-area sequences, a 2001-2015 training period, held-out 2016-2020 tests, event-level bootstrap intervals, complete derived tables, and three diagnostic figures.
 - Added the `fire_metabolism` scientific Python package as an executable mathematical companion to the *Fire Is Metabolic* Supplementary Information.

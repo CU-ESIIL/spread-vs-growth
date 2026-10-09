@@ -8,6 +8,11 @@ import FireProof.Connectivity
 import FireProof.Metabolism
 import FireProof.Identifiability
 import FireProof.Units
+import FireProof.Reorganization
+import FireProof.Attractor
+import FireProof.OTPrediction
+import FireProof.OTCounterexamples
+import FireProof.Realization
 
 /-! # Machine-readable claim-status vocabulary -/
 
@@ -72,7 +77,31 @@ def coreClaims : List Claim := [
     "Matching efficiency peaks at equality, but total forcing increases in either state."⟩,
   ⟨"Closed peak condition needs an independent eta derivative", "Dimensionless.peakBalance_eq_transitionBalance",
     .provedWithAdditionalAssumptions, "exact matching, fuel, and coherence closures", "algebraic reduction",
-    "The dimensionless transition surface depends only on x, C, and parameters."⟩
+    "The dimensionless transition surface depends only on x, C, and parameters."⟩,
+  ⟨"Spatial reorganization is nonnegative", "Reorganization.reorganization_nonnegative",
+    .proved, "the abstract distance is nonnegative", "definition and order",
+    "This proves no wildfire mechanism and does not require Wasserstein structure."⟩,
+  ⟨"Zero reorganization identifies the simple-growth null", "Reorganization.reorganization_zero_iff",
+    .provedWithAdditionalAssumptions, "identity of indiscernibles", "abstract distance",
+    "A merely nonnegative spatial score is insufficient for the equivalence."⟩,
+  ⟨"Observed R strictly narrows future K", "OTPrediction.observed_R_strictly_narrows_unconstrained_K",
+    .provedWithAdditionalAssumptions, "an empirical R-indexed finite interval closure", "set inclusion",
+    "R alone supplies no interval; the closure is the scientific content."⟩,
+  ⟨"R alone determines future growth", "OTCounterexamples.same_R_different_future_growth",
+    .falseAsStated, "none; explicit states share R but differ in future growth", "formal counterexample",
+    "Adding a spatial observation without a predictive closure does not strengthen the reduced growth law."⟩,
+  ⟨"Linear restoration decreases squared deviation", "Attractor.linear_step_decreases_lyapunov",
+    .provedWithAdditionalAssumptions, "0 < lambda < 2 and a non-equilibrium state", "algebra",
+    "The theorem is generic in sigma-star and cannot select one-half or two-thirds empirically."⟩,
+  ⟨"Realized growth is bounded by potential growth", "Realization.realized_growth_nonnegative_and_bounded",
+    .provedWithAdditionalAssumptions, "0 ≤ B ≤ 1 and nonnegative potential factors", "order algebra",
+    "The bound is internal to the model and is not a universal physical maximum."⟩,
+  ⟨"Area growth identifies B and K separately", "Realization.distinct_factor_counterexample",
+    .falseAsStated, "none; distinct B and K pairs share the same product", "formal counterexample",
+    "FIRED area growth identifies realized coupling BK, not its latent factors."⟩,
+  ⟨"Restoration survives an unresolved shock", "Realization.restoration_survives_bounded_shock",
+    .provedWithAdditionalAssumptions, "the shock contribution is smaller than endogenous restoration", "algebra",
+    "Universal restoration is not proved when shocks are unrestricted."⟩
 ]
 
 end FireProof.Audit

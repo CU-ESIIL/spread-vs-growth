@@ -1,5 +1,6 @@
 import FireProof.Assumptions
 import FireProof.Scaling
+import FireProof.Normalization
 import FireProof.Growth
 import FireProof.Kinematics
 import FireProof.ActiveBoundary
@@ -12,4 +13,9 @@ import FireProof.Units
 import FireProof.Lifecycle
 import FireProof.Dimensionless
 import FireProof.MechanismTests
+import FireProof.Reorganization
+import FireProof.Attractor
+import FireProof.OTPrediction
+import FireProof.OTCounterexamples
+import FireProof.Realization
 import FireProof.Audit

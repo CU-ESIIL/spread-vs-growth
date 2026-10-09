@@ -37,6 +37,7 @@ lake env lean --run .lake/packages/mathlib/Cache/Main.lean get
 | --- | --- |
 | `Assumptions.lean` | Explicit proportionality, empirical-premise marker, and barrier/uniqueness predicates |
 | `Scaling.lean` | Shared-size elimination, explicit coefficient, and `4/3 -> 2/3` |
+| `Normalization.lean` | Fixed versus anchored normalization, candidate-ratio identities, and exponent non-identification with unrestricted coefficients |
 | `Growth.lean` | Constant-beta transformed solution and rigorous cubic/quadratic ratio limits |
 | `Kinematics.lean` | Named moving-boundary axiom and proved coarse-grained reductions |
 | `ActiveBoundary.lean` | Active-boundary substitution and exact cube-root cancellation |
@@ -74,6 +75,8 @@ The human-readable findings are in:
 - `PREDICTION_HIERARCHY.md`
 - `SI_REVISION_MAP.md`
 - `SYNTHESIS.md`
+- `HALF_POWER_NORMALIZATION_FORMAL_AUDIT.md`
+- `HALF_POWER_NORMALIZATION_DEPENDENCIES.md`
 
 Run the deterministic numerical stress test with the repository environment:
 

@@ -19,6 +19,24 @@ nav:
       - FIRED Persistence And Damage: fired-persistence-damage.md
       - FIRED Potential-To-Realization Gap: fired-realization-gap.md
       - FIRED Missing-Process Tests: fired-missing-processes.md
+      - Detection And Prediction Audit: DETECTION_PREDICTION_AUDIT.md
+      - Detection Validation: DETECTION_VALIDATION.md
+      - Prediction Validation: PREDICTION_VALIDATION.md
+      - Mechanism Discrimination: MECHANISM_DISCRIMINATION.md
+      - Effective Coupling Audit: EFFECTIVE_COUPLING_AUDIT.md
+      - Effective Coupling Validation: EFFECTIVE_COUPLING_VALIDATION.md
+      - Geometric Attractor Audit: GEOMETRIC_ATTRACTOR_AUDIT.md
+      - Geometric Attractor Validation: GEOMETRIC_ATTRACTOR_VALIDATION.md
+      - Within-Between Geometric Scaling: GEOMETRIC_MANIFOLD_VALIDATION.md
+      - Geometric Scaling Manuscript Handoff: GEOMETRIC_MANIFOLD_MANUSCRIPT_HANDOFF.md
+      - One-Half Normalization Re-audit: HALF_POWER_REAUDIT.md
+      - One-Half Manuscript Handoff: HALF_POWER_REAUDIT_MANUSCRIPT_HANDOFF.md
+      - Optimal Transport Validation: OPTIMAL_TRANSPORT_VALIDATION.md
+      - Integrated Geometry And Transport: INTEGRATED_GEOMETRY_TRANSPORT_VALIDATION.md
+      - Latent Constraint Validation: LATENT_CONSTRAINT_VALIDATION.md
+      - FIRED Detectability Matrix: FIRED_DETECTABILITY_MATRIX.md
+      - Half Versus Two-Thirds Constraint Test: HALF_VS_TWO_THIRDS_CONSTRAINT_TEST.md
+      - SI Empirical Handoff: SI_EMPIRICAL_HANDOFF.md
       - Fire Metabolism Mathematics: fire-metabolism-math.md
       - Manuscript Figure Remakes: manuscript-figures.md
 

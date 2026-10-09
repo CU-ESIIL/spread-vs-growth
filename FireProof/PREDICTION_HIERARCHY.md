@@ -4,6 +4,13 @@ The hierarchy runs from weak pattern agreement to tests that constrain the
 proposed mechanism. A higher level does not repair failure at a lower required
 measurement or closure level.
 
+The realization-aware hierarchy now separates geometric scaling, endogenous
+growth, realized growth, spatial reorganization, statistical detection of
+constraint-like deficits, and causal attribution. FIRED reaches the fifth level
+only probabilistically and generally cannot reach the sixth without independent
+data. A realized forecast must state whether it assumes `B=1`, known `B`, or
+only `0<=B<=1`; the last gives bounds rather than a unique trajectory.
+
 | Prediction | Mathematical source | Required assumptions | Observable quantities | Independent or dependent | Competing mechanism | Falsification criterion | Evidential strength |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Measurement objects are stable across time and scale | Observation definitions | Fixed sensor, resolution, boundary rule, event lineage | Reprocessed maps and controls | Foundational, not a model consequence | Resolution, holes, merging, elongation | Results change materially under prespecified equivalent observation rules | Prerequisite |

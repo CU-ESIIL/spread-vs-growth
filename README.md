@@ -120,6 +120,99 @@ Results are documented in `docs/fired-state-survival.md`.
 
 The current interpretation report can be rebuilt with `scripts/build_fired_prediction_report.py`. The staged next experiment is specified in `MODEL_DISCRIMINATION_AUDIT.md`, with conventional-spread feasibility in `CONVENTIONAL_MODEL_COMPARISON_PLAN.md`.
 
+## Adversarial Detection And Prediction Validation
+
+The integrated validation pipeline tests uncertainty-aware geometric regime
+detection, origin-safe future-area prediction, acceleration sign,
+sign-changing peak transitions, model discrimination, synthetic negative
+controls, calibration, and subgroup robustness:
+
+```bash
+MPLCONFIGDIR=tmp/matplotlib-cache PYTHONPATH=src \
+  .venv/bin/python scripts/run_adversarial_validation.py
+```
+
+Use `--smoke --output-dir outputs/adversarial_validation_smoke` for a small
+deterministic run. The full machine-readable results and six figures are under
+`outputs/adversarial_validation/`. Scientific interpretation is in
+`docs/DETECTION_VALIDATION.md`, `docs/PREDICTION_VALIDATION.md`,
+`docs/MECHANISM_DISCRIMINATION.md`, and `docs/SI_EMPIRICAL_HANDOFF.md`.
+
+The principal positive result is narrow: full mapped geometry improves
+held-out prediction beyond matched area and recent-dynamics baselines. A
+binary `2/3` detector adds little, fixed `2/3` temporal extrapolation fails,
+and the latent coherence-fuel mechanism remains unidentifiable from FIRED.
+
+The effective-coupling extension models the observable coefficient in
+`M = K A^(2/3)` and propagates it through structured area forecasts:
+
+```bash
+MPLCONFIGDIR=tmp/matplotlib-cache PYTHONPATH=src \
+  .venv/bin/python scripts/run_effective_coupling_validation.py
+```
+
+It finds short-horizon predictability and small held-out area-forecast gains,
+but calibration does not uniquely select the `2/3` normalization. Details are
+in `docs/EFFECTIVE_COUPLING_VALIDATION.md`.
+
+The geometric-attractor extension then tests whether local perimeter-area
+slopes actively restore toward `2/3`, with measurement-error, random-walk,
+within-fire, observation-rule, long-fire, and prospective prediction checks:
+
+```bash
+MPLCONFIGDIR=tmp/matplotlib-cache PYTHONPATH=src \
+  .venv/bin/python scripts/run_geometric_attractor_validation.py
+```
+
+The strong two-thirds-attractor claim is not supported: the free equilibrium
+is unstable and not near `2/3`, measurement error can explain the apparent
+reversion, perimeter convention changes its sign, and flexible dynamics
+predict better. See `docs/GEOMETRIC_ATTRACTOR_VALIDATION.md`.
+
+The longitudinal geometric-manifold analysis then separates the pooled cloud
+into within-fire and between-fire relationships:
+
+```bash
+PYTHONPATH=src ../cubedynamics/.venv/bin/python \
+  scripts/run_geometric_manifold_validation.py
+```
+
+In the locked 4,032-event cohort, the population, between-fire, and within-fire
+exponents are `0.614`, `0.646`, and `0.594`, respectively. The near-two-thirds
+signal is therefore primarily between fires rather than the mean trajectory of
+an individual fire. Results, observation sensitivities, synthetic
+reconciliation, and state-prediction tests are documented in
+`docs/GEOMETRIC_MANIFOLD_VALIDATION.md`.
+
+The one-half normalization re-audit then separates population-locked,
+fire-specific, origin-anchored, local-slope, and temporal-growth hypotheses:
+
+```bash
+PYTHONPATH=src ../cubedynamics/.venv/bin/python \
+  scripts/run_half_power_reaudit.py
+```
+
+On independent held-out geometry observations, the development-locked
+one-half law is worse than two-thirds, while the development exponent near
+`0.595` is best. Retrospective fire-specific intercept fitting benefits
+one-half substantially, and anchored candidates have little discrimination at
+small area expansion. See `docs/HALF_POWER_REAUDIT.md`; the corresponding Lean
+normalization audit is in
+`FireProof/HALF_POWER_NORMALIZATION_FORMAL_AUDIT.md`.
+
+Build the two empirical manuscript figures directly from those locked
+machine-readable validation outputs:
+
+```bash
+MPLCONFIGDIR=tmp/matplotlib-cache PYTHONPATH=src \
+  .venv/bin/python scripts/build_detection_prediction_figures.py
+```
+
+This presentation-only step writes 600-dpi PNG and vector PDF/SVG figures,
+publication-ready captions, plotted source tables, and an input-checksum
+manifest under `output/manuscript/`. It does not refit the detector or any
+forecast model.
+
 Rebuild the current manuscript figures as publication-size PNG, PDF, and SVG assets:
 
 ```bash
@@ -137,6 +230,18 @@ PYTHONPATH=src python scripts/build_computational_si_pdf.py
 ```
 
 The resulting 32-page document is written to `output/pdf/fire_metabolism_computational_si.pdf`.
+
+## Integrated Geometry And Transport
+
+The integrated FIRED experiment tests whether local geometric departure
+predicts spatial reorganization, whether reorganization predicts restoration
+or future effective coupling, and whether those additions improve held-out
+forecasts. It includes real daily polygon OT, area-matched simple-growth nulls,
+simple-metric competitors, synthetic checks, long-fire trajectories, and an
+abstract Lean audit of exactly which predictive closures are required.
+
+See `docs/INTEGRATED_GEOMETRY_TRANSPORT_VALIDATION.md` for the scientific
+verdict and `scripts/README.md` for the two-stage reproduction commands.
 
 ## Fire-Model Scaling Workflow
 

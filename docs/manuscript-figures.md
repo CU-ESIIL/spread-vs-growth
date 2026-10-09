@@ -22,6 +22,37 @@ The generated figures do not all represent the same kind of evidence:
 
 None of these figures is empirical wildfire validation. Figure 1 does not contain global fire observations, and the dimensions printed in Figures 2 and 3 must not be described as measurements of real combustion interfaces.
 
+## Empirical detection and prediction figures
+
+Two separate manuscript figures summarize the locked FIRED adversarial
+validation without rerunning or changing its statistical design:
+
+```bash
+MPLCONFIGDIR=tmp/matplotlib-cache PYTHONPATH=src \
+  .venv/bin/python scripts/build_detection_prediction_figures.py
+```
+
+The build reads only the machine-readable files under
+`outputs/adversarial_validation/` plus the cached daily area and cumulative
+geometry sequences used for the past-only trajectory examples. It writes
+`figure_detection` and `figure_prediction` as 600-dpi PNG, vector PDF, and SVG
+files under `output/manuscript/`, together with publication captions, exact
+panel source tables, selected-example records, and a checksum manifest.
+
+The detection figure shows that a near-two-thirds exterior-perimeter slope is
+common but observation-dependent. The three day-10 trajectories are selected
+by a fixed rule: within compatible, ambiguous, and inconsistent detector
+classes, use the held-out event nearest the median normalized confidence-
+interval margin around `2/3`. This avoids selecting unusually clean examples.
+
+The prediction figure preserves the prospective interpretation of the audit.
+It compares day-7 forecasts at matched horizons, plots paired whole-fire
+bootstrap differences, separates the full geometry proxy from the binary
+geometric indicator, and reports held-out future-acceleration balanced
+accuracy. It does not present mapped perimeter as active fireline, the
+geometric indicator as latent coherence, or the geometry proxy as the
+canonical coherence-fuel model.
+
 ## Life and death model
 
 The Figure 4 remake resolves a mismatch in the manuscript draft: the caption describes four spatial stages, while the embedded figure contains only time-series panels. The Python figure contains both.

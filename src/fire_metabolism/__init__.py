@@ -8,7 +8,14 @@ perimeter-area exponent or is metabolic in the biological sense.
 from .growth import analytic_area, constant_beta_area
 from .geometry import right_angle_polygon
 from .kinematics import boundary_area_rate
+from .spatial_reorganization import sliced_wasserstein
 
-__all__ = ["analytic_area", "boundary_area_rate", "constant_beta_area", "right_angle_polygon"]
+__all__ = [
+    "analytic_area",
+    "boundary_area_rate",
+    "constant_beta_area",
+    "right_angle_polygon",
+    "sliced_wasserstein",
+]
 
 __version__ = "0.1.0"

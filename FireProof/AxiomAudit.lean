@@ -1,6 +1,13 @@
 import FireProof
 
 #print axioms FireProof.Scaling.four_thirds_direct_power_law
+#print axioms FireProof.Normalization.anchoredPrediction_at_origin
+#print axioms FireProof.Normalization.anchored_candidate_ratio
+#print axioms FireProof.Normalization.half_two_thirds_anchored_ratio
+#print axioms FireProof.Normalization.fire_specific_constant_log_slope
+#print axioms FireProof.Normalization.variable_normalization_reconstructs
+#print axioms FireProof.Normalization.geometric_two_thirds_elimination
+#print axioms FireProof.Normalization.euclidean_one_half_elimination
 #print axioms FireProof.Growth.two_thirds_transformed_solution
 #print axioms FireProof.Matching.eta_unique_global_max
 #print axioms FireProof.Fuel.remaining_mem_unit
@@ -16,3 +23,13 @@ import FireProof
 #print axioms FireProof.MechanismTests.closedForcing_hasDerivAt_C
 #print axioms FireProof.MechanismTests.cubic_quadratic_headlines_are_dependent
 #print axioms FireProof.Dimensionless.peakBalance_eq_transitionBalance
+#print axioms FireProof.Reorganization.reorganization_nonnegative
+#print axioms FireProof.Reorganization.reorganization_zero_iff
+#print axioms FireProof.Attractor.linear_step_decreases_lyapunov
+#print axioms FireProof.OTPrediction.observed_R_strictly_narrows_unconstrained_K
+#print axioms FireProof.OTCounterexamples.same_R_different_future_growth
+#print axioms FireProof.Realization.realized_growth_nonnegative_and_bounded
+#print axioms FireProof.Realization.observed_rate_identifies_product
+#print axioms FireProof.Realization.distinct_factor_counterexample
+#print axioms FireProof.Realization.bounded_realization_narrows_upper_growth
+#print axioms FireProof.Realization.restoration_survives_bounded_shock

@@ -2,6 +2,70 @@
 
 This file records substantive user prompts and the repository changes made in response. Keep entries concise, factual, and useful for reconstructing project intent.
 
+## 2026-10-08
+
+### Prompt
+
+> Integrate the geometric-attractor test with balanced and unbalanced optimal transport on real FIRED footprints, area-matched simple-growth nulls, synthetic and resolution checks, future-coupling and long-horizon prediction, and a Lean audit of exactly what R adds.
+
+### Response Summary
+
+- Reused the locked FIRED cohort and temporal split, then computed 9,035 real footprint transitions from a 900-fire outcome-blind stratified sample plus descriptive long fires.
+- Added area-matched isotropic-dilation nulls, balanced sliced W1/W2, KL-relaxed unbalanced transport, geographic and translation-normalized variants, synthetic benchmarks, resolution checks, and ordinary spatial competitors.
+- Found that departure from `2/3` predicts more R, but R does not predict overall restoration toward `2/3`; the proposed attractor mechanism remains unsupported.
+- Found small paired future-K gains for geometry plus OT from 5 through 49 days, while absolute future-area error still grows and simpler spatial metrics overlap strongly with R.
+- Added exact cube-root target comparisons, primary and long-fire figures, complete Parquet/CSV outputs, design and run reports, validation docs, and reproducible extraction and analysis scripts.
+- Extended FireProof with abstract reorganization, generic attractor, conditional prediction-set, and counterexample modules; `lake build` and the axiom audit pass without new custom axioms.
+
+### Prompt
+
+> Test whether effective coupling in `M = K A^(2/3)` is predictable from FIRED geometry, whether structured coupling forecasts improve short- and long-horizon area and transition prediction, and preserve the distinction between observable `K` and latent mechanism.
+
+### Response Summary
+
+- Added a locked effective-coupling analysis using 4,032 FIRED fires, 54,002 event-days, development/calibration/held-out years, and whole-fire uncertainty.
+- Compared persistence, history, area dynamics, mapped geometry, and flexible coupling models, then recursively propagated predictions into future area.
+- Found short-horizon geometry value and small structured area-forecast gains through tested horizons, but no unique support for `2/3` normalization and rapidly declining active-target prevalence at long leads.
+- Exported complete machine-readable outputs, two publication figures, a design audit, scientific interpretation, and focused identity and recursion tests.
+
+### Prompt
+
+> Test whether `2/3` is a dynamical attractor for wildfire geometry. Try hard to falsify it using local slope estimators, held-out directional restoration, free-equilibrium models, regression-to-the-mean nulls, within-fire tests, long fires, observation robustness, boundary reorganization, effective coupling, and prospective prediction.
+
+### Response Summary
+
+- Locked four candidate local-state estimators before held-out evaluation and selected seven-observation rolling OLS by calibration future-slope error, not by proximity to `2/3`.
+- Added whole-fire restoring-force and free-equilibrium inference, fixed `1/2` and `2/3` comparisons, flexible dynamics, measurement-error, shuffled-time and random-walk nulls, within-fire centering, long-fire returns, and observation-rule checks.
+- Found a weak negative held-out slope association but an implausible free equilibrium, only 30.7% of transitions ending closer to `2/3`, stronger apparent reversion under measurement error, and sign reversal under total perimeter.
+- Found that fixed `2/3` offers only a small one-step gain over persistence, loses to flexible dynamics, and adds essentially no downstream coupling, area, or acceleration skill beyond current geometry.
+- Added complete machine-readable outputs, a four-panel publication figure, design and results reports, and four focused estimator and model tests.
+
+### Prompt
+
+> Build two publication-quality Fire Critter empirical figures from the locked adversarial-validation outputs: one showing that near-two-thirds geometry is recurring but not a state label, and one showing that current geometry improves held-out future-growth and transition prediction. Preserve the audit's scientific distinctions, export vector and high-resolution assets and captions, and add deterministic tests.
+
+### Response Summary
+
+- Added a presentation-only empirical-figure module and reproducible build script that read the locked validation CSVs rather than rerunning the analysis.
+- Built a four-panel detection figure with reproducibly selected held-out trajectories, slope distributions, detector persistence, and observation-rule sensitivity.
+- Built a four-panel prediction figure with horizon-specific errors, paired whole-fire improvements, full-geometry versus binary-indicator value, and held-out future-acceleration accuracy.
+- Exported publication-ready PDF, SVG, and 600-dpi PNG files, captions, exact panel source tables, and a checksum manifest under `output/manuscript/`.
+- Added focused tests for locked numerical values, reference exponents, past-only histories, required inputs, and deterministic rendering.
+
+### Prompt
+
+> Adversarially validate whether Fire Critter can detect a coherent whole-fire growth state, distinguish it from ordinary geometry and local spread, predict future growth and life-cycle transitions on held-out FIRED observations, outperform fair alternatives, survive synthetic counterexamples, and support explicit SI claims without optimizing for favorable results.
+
+### Response Summary
+
+- Audited the existing formal theory, FIRED workflows, model-discrimination plan, conventional-model feasibility, computational SI, tests, and outputs before adding code.
+- Identified future-derived dominant land cover, retrospective cohort conditioning, target-adjacent feature tables, missing prospective `Amax`, and latent-coherence reconstruction as leakage or identifiability hazards.
+- Added a reusable adversarial-validation module and full/smoke pipeline with immutable origin-safe predictor lists, fixed temporal partitions, whole-event bootstrap uncertainty, calibration, subgroup robustness, and six publication figures.
+- Found recurrent but observation-sensitive near-two-thirds geometry; only 15.4% of eligible held-out fires had persistent detections by day 7, and no independent coherent-state labels exist.
+- Found significant predictive value in full mapped geometry beyond equally informed recent dynamics, but little value in the binary two-thirds detector and poor performance from fixed two-thirds temporal growth.
+- Found partial held-out support for geometry-informed acceleration and peak-transition risk, while precise early termination remained unsupported and latent mechanism and energetic metabolism remained unidentifiable or untested.
+- Added synthetic negative controls, machine-readable evidence classifications, detection and prediction reports, mechanism-discrimination conclusions, and an SI-ready empirical handoff.
+
 ## 2026-09-27
 
 ### Prompt
@@ -489,3 +553,79 @@ This file records substantive user prompts and the repository changes made in re
 - Created `THEORY_CORE.md`, `MANUSCRIPT_CLAIMS.md`, `PREDICTION_HIERARCHY.md`, `SI_REVISION_MAP.md`, and `SYNTHESIS.md`.
 - Reviewed all 23 SI sections and assigned exact keep, modify, move, remove, or add actions without rewriting the manuscript.
 - Proposed a single `C-F` phase-plane figure combining the forcing landscape, connectivity nullcline, acceleration-transition contours, and contrasting trajectories.
+
+### Prompt
+
+> Continue the integrated FIRED geometry/transport work, add latent external
+> constraints to FireProof and prediction validation, then test whether
+> unresolved realization deficits explain why one-half sometimes predicts
+> future mapped geometry better than two-thirds. Produce a comprehensive PDF
+> report of the latest prediction work.
+
+### Response Summary
+
+- Rebuilt the integrated transport analysis from the corrected outcome-blind
+  941-fire sample with 8,667 transitions.
+- Added an origin-safe expected-growth model, realization residuals, prospective
+  deficit hazards, change-point, termination, OT-timing, and shock-robust
+  attractor analyses for the locked 4,032-fire cohort.
+- Added a held-out 1/2-versus-2/3 falsification test on 4,041 matched transitions;
+  negative realization deficits did not explain one-half's advantage.
+- Added a realization-factor Lean module and documentation distinguishing
+  detection from causal attribution.
+
+### Prompt
+
+> Does two-thirds describe how individual fires grow, or merely how fires of different sizes compare? Reproduce the FIRED population relationship, separate within-fire and between-fire scaling, test candidate exponents and observation sensitivity, reconcile local slopes with longitudinal growth, run synthetic manifold tests, evaluate normalized geometry as a state variable, and produce publication figures, reports, a claims table, and a FireProof audit.
+
+### Response Summary
+
+- Added `geometric_manifold.py` and a restartable validation runner using the locked 4,032-event FIRED cohort and temporal split.
+- Estimated population, between-fire, and within-fire exponents of `0.614`, `0.646`, and `0.594`; held-out within and between estimates were `0.595` and `0.643`.
+- Added whole-fire bootstrap intervals, event-specific and hierarchical random slopes, flexible and original-scale fits, perimeter/cadence/error sensitivities, synthetic reconciliation, and origin-safe geometric-state prediction.
+- Found that two-thirds is mainly a between-fire description, no tested fixed synthetic manifold reproduces the joint observations, and `Z_2/3` is predictively useful but drifts with area and is not mechanism-specific.
+- Added publication-quality PDF/SVG/400-dpi PNG figures, complete machine-readable outputs, the scientific report, formal dependency audit, manuscript handoff, website navigation, and focused tests.
+
+### Prompt
+
+> Re-audit every one-half result under a constrained geometric null. Inventory
+> and classify all uses, cross candidate exponents with population-locked,
+> fire-specific, and origin-anchored intercept treatments, rerun normalization,
+> shrinkage, constraint, synthetic, area-expansion, and long-trajectory tests,
+> and produce a report and manuscript handoff without changing the manuscript.
+
+### Response Summary
+
+- Added a locked-cohort one-half re-audit with a repository inventory, semantic
+  audit, figure-intercept audit, and diffusion-language audit.
+- Crossed `1/2`, `2/3`, `3/4`, and the development exponent `0.595` with five
+  explicit intercept treatments on held-out geometry.
+- Found that one-half is worse than two-thirds as a development-locked
+  population law, gains substantially more from retrospective fire-specific
+  fitting, and loses at high anchored area expansion despite local
+  competitiveness at low leverage.
+- Added whole-fire bootstrap uncertainty, zero-drift and long-trajectory tests,
+  calibrated synthetic controls, a six-panel figure, scientific report, and
+  manuscript handoff.
+
+### Prompt
+
+> Audit FireProof for the intercept/normalization problem in the one-half
+> versus two-thirds comparison. Determine what existing proofs mean, formalize
+> common, fire-specific, variable, and anchored normalization distinctions,
+> prove the anchoring and ratio identities and geometric eliminations, and
+> produce a formal audit and theorem dependency map before changing core theory.
+
+### Response Summary
+
+- Determined that existing scaling proofs preserve the coefficient exactly but
+  are pointwise and do not encode coefficient constancy over fires, time, or an
+  area domain.
+- Issued the verdict `NORMALIZATION ASSUMPTION MUST BE MADE EXPLICIT`; no
+  existing core theorem was changed.
+- Added an isolated Lean normalization module proving exact anchoring,
+  candidate ratios, the one-sixth half-versus-two-thirds separation,
+  fire-specific log-slope cancellation, unrestricted-normalization
+  non-identification, and explicit Euclidean/two-thirds coefficients.
+- Added the formal audit and dependency map and verified the pinned Lean build
+  and axiom audit.

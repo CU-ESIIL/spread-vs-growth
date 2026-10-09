@@ -204,6 +204,131 @@ MPLCONFIGDIR=tmp/matplotlib-cache PYTHONPATH=src \
 
 The held-out comparison preserves the 2001-2012 development, 2013-2015 calibration, and 2016-2020 evaluation split. It compares geometry plus state with a newly burned-boundary proxy, past gridMET weather, both additions, and an explicitly non-operational observed next-day-weather oracle. Retrospective diagnostics test terminal weather changes and sensitivity to the definition of abrupt termination. Outputs are written to `outputs/fired_missing_processes/`.
 
+## Adversarial FIRED validation
+
+```bash
+MPLCONFIGDIR=tmp/matplotlib-cache PYTHONPATH=src \
+  .venv/bin/python scripts/run_adversarial_validation.py
+```
+
+This reuses the cached FIRED sequences, cumulative geometry, and weather
+features to test geometric regime stability, future-area forecasts,
+acceleration sign, sign-changing peak transitions, termination evidence, and
+synthetic counterexamples. Predictor whitelists exclude future-derived land
+cover and outcome columns. The full run uses 2,000 whole-event bootstrap
+replicates and exports machine-readable predictions, metrics, calibration,
+subgroup robustness, an evidence classification, and six figures under
+`outputs/adversarial_validation/`.
+
+For a deterministic end-to-end check:
+
+```bash
+MPLCONFIGDIR=tmp/matplotlib-cache PYTHONPATH=src \
+  .venv/bin/python scripts/run_adversarial_validation.py \
+  --smoke --output-dir outputs/adversarial_validation_smoke
+```
+
+## Effective coupling validation
+
+```bash
+MPLCONFIGDIR=tmp/matplotlib-cache PYTHONPATH=src \
+  .venv/bin/python scripts/run_effective_coupling_validation.py
+```
+
+This constructs the start-of-day observable coefficient
+`K_obs = daily_area / prior_area^(2/3)`, compares coupling-history,
+area-dynamics, mapped-geometry, and flexible models on the locked temporal
+split, and recursively propagates predicted coupling into future area. Use
+`--reuse-primary` to resume downstream summaries from a completed primary
+prediction table. Outputs are written to
+`outputs/effective_coupling_validation/`.
+
+## Geometric attractor validation
+
+```bash
+MPLCONFIGDIR=tmp/matplotlib-cache PYTHONPATH=src \
+  .venv/bin/python scripts/run_geometric_attractor_validation.py
+```
+
+This selects a local perimeter-area slope estimator on development/calibration
+data and tests held-out restoring dynamics toward `2/3` against persistence,
+`1/2`, population-mean, free-equilibrium, flexible, measurement-error,
+random-walk, within-fire, and observation-rule alternatives. It exports all
+local states, transitions, model and null results, long-fire return summaries,
+coupling and boundary associations, and PDF/SVG/400-dpi PNG figures under
+`outputs/geometric_attractor_validation/`. Add `--smoke` for a deterministic
+300-fire end-to-end check.
+
+## Integrated geometry and transport validation
+
+Run the restartable geospatial extraction in an environment containing
+GeoPandas, Shapely, Rasterio, and PyArrow, then run the statistical integration:
+
+```bash
+MPLCONFIGDIR=tmp/matplotlib-cache PYTHONPATH=src \
+  ../cubedynamics/.venv/bin/python scripts/extract_fired_transport_metrics.py
+
+MPLCONFIGDIR=tmp/matplotlib-cache PYTHONPATH=src \
+  ../cubedynamics/.venv/bin/python scripts/run_integrated_geometry_transport.py
+```
+
+The extractor reads the existing cached FIRED daily polygon GeoPackage without
+copying it into this repository. It constructs area-matched isotropic-dilation
+nulls, computes balanced sliced and KL-relaxed unbalanced transport, records
+ordinary shape metrics, and writes a Parquet transition table. The integration
+stage reuses the locked attractor outputs and temporal split, tests the proposed
+geometry-to-R-to-restoration chain, evaluates future coupling and area through
+49 days, runs paired whole-fire comparisons, and builds the primary and
+long-fire figures under `outputs/integrated_geometry_transport/`.
+
+## Within-between geometric scaling validation
+
+```bash
+MPLCONFIGDIR=tmp/matplotlib-cache PYTHONPATH=src \
+  ../cubedynamics/.venv/bin/python scripts/run_geometric_manifold_validation.py
+```
+
+This separates population, between-fire, within-fire, fire-specific, and local
+perimeter-area scaling in the locked FIRED cohort. It includes whole-fire
+bootstrap intervals, a random-intercept/random-slope meta-analytic model,
+candidate-normalization tests, flexible power-law checks, perimeter and cadence
+sensitivities, synthetic reconciliation, normalized-state prediction, and
+algorithmically selected held-out examples. Outputs are written to
+`outputs/geometric_manifold_validation/`; use `--smoke` for a small end-to-end
+check.
+
+## Latent constraints and exponent discrimination
+
+```bash
+MPLCONFIGDIR=/tmp/mpl PYTHONPATH=src \
+  ../cubedynamics/.venv/bin/python scripts/run_latent_constraint_validation.py
+
+MPLCONFIGDIR=/tmp/mpl PYTHONPATH=src \
+  ../cubedynamics/.venv/bin/python scripts/run_half_vs_two_thirds_constraint_test.py
+```
+
+The first command learns expected future growth from past-only development and
+calibration states, detects negative realization residuals, evaluates deficit
+hazards, termination association, OT timing, and shock-robust attractor fits.
+The second performs the held-out falsification test asking whether those
+residuals explain one-half's advantage over two-thirds. Both write Parquet/CSV
+data, design locks, reports, and PDF/SVG/400-dpi PNG figures.
+
+## Empirical detection and prediction figures
+
+```bash
+MPLCONFIGDIR=tmp/matplotlib-cache PYTHONPATH=src \
+  .venv/bin/python scripts/build_detection_prediction_figures.py
+```
+
+This presentation-only build reads the locked adversarial-validation CSVs and
+cached past trajectories; it does not refit models. It writes the detection
+and prediction figures to `output/manuscript/` as 600-dpi PNG, vector PDF, and
+SVG files. The same directory receives publication-ready captions, exact
+plotted source-data tables, the reproducibly selected trajectory examples,
+and a manifest with all input SHA-256 checksums. Use `--dpi` or `--output-dir`
+to override the publication raster resolution or destination.
+
 ## Manuscript figure remakes
 
 ```bash
