@@ -629,3 +629,29 @@ This file records substantive user prompts and the repository changes made in re
   non-identification, and explicit Euclidean/two-thirds coefficients.
 - Added the formal audit and dependency map and verified the pinned Lean build
   and axiom audit.
+
+### Prompt
+
+> Perform the final major FIRED audit of geometric state, scale dependence,
+> detection, and prediction. Compare fixed normalizations, raw perimeter, full
+> geometry, and prior spatial reorganization under the locked cohort and
+> temporal split; create a two-panel manuscript figure, SI figures, complete
+> provenance, an authoritative scale audit, and a manuscript handoff without
+> post hoc exponent, threshold, lifecycle, or horizon searches.
+
+### Response Summary
+
+- Added a fixed model hierarchy across six existing target families and all
+  established horizons with development/calibration tuning and 1,000
+  whole-fire bootstrap replicates.
+- Found no special predictive information in two-thirds or any other fixed
+  normalization once area and recent area change are included; raw perimeter
+  is equivalent, while full mapped geometry improves future prediction.
+- Found that the primary contemporaneous major-deficit detector is weak and
+  receives no ranking improvement from geometry, preventing a strong
+  detection claim.
+- Consolidated demonstrated scale sensitivities and retained independent
+  spatial-resolution scaling as unresolved.
+- Added the main and eight SI figure families, machine-readable predictions,
+  metrics, bootstrap distributions, complete provenance, final reports, tests,
+  documentation navigation, and reproduction instructions.

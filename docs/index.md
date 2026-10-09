@@ -85,3 +85,13 @@ The development-estimated within-fire exponent near `0.595` remains the best
 general geometric candidate. The corresponding FireProof audit preserves the
 existing algebra while making the required fixed-normalization assumption
 explicit.
+
+The [final state, scale, detection, and prediction audit](FINAL_STATE_SCALE_PREDICTION_AUDIT.md)
+closes the major FIRED analysis pass. Fixed `1/2`, `2/3`, `3/4`, and
+development `0.595` normalizations are predictively indistinguishable after
+conditioning on area, whereas full multivariate geometry adds reproducible
+future-area skill. The primary current-deficit detection task remains weak and
+does not improve with geometry. The separate
+[geometric scale audit](GEOMETRIC_SCALE_AUDIT.md) records which scale
+sensitivities are empirical and why true spatial multi-resolution scaling
+remains unresolved.

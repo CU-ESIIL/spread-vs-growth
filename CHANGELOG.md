@@ -1,5 +1,24 @@
 # Changelog
 
+## 2026-10-09 - Final FIRED state, scale, detection, and prediction audit
+
+- Ran one locked model hierarchy across future area, realized coupling,
+  acceleration sign, realization deficit, mapped termination, and valid OT
+  reorganization targets at the established horizons.
+- Demonstrated that `1/2`, `2/3`, `3/4`, and development `0.595`
+  normalizations are predictively equivalent once area and recent area change
+  are known; raw perimeter carries the same one-dimensional information.
+- Found reproducible future-area gains from full multivariate geometry beyond
+  perimeter, including 13.3% seven-day skill relative to area plus dynamics,
+  while the primary contemporaneous deficit detector remained weak and did
+  not improve with geometry.
+- Consolidated cadence, lifecycle, area-scale, boundary, estimator, and error
+  sensitivities and retained true spatial multi-resolution scaling as
+  unresolved.
+- Added the main two-panel figure, eight SI figure families, row-level
+  predictions, whole-fire bootstrap distributions, complete provenance, an
+  authoritative audit, and a manuscript handoff.
+
 ## 2026-10-09 - One-half normalization empirical and formal re-audit
 
 - Inventoried and classified repository one-half results as population laws,

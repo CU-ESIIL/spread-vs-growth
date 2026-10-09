@@ -200,6 +200,21 @@ small area expansion. See `docs/HALF_POWER_REAUDIT.md`; the corresponding Lean
 normalization audit is in
 `FireProof/HALF_POWER_NORMALIZATION_FORMAL_AUDIT.md`.
 
+The final state, scale, detection, and prediction audit compares raw perimeter,
+four fixed normalizations, full mapped geometry, and valid prior spatial
+reorganization under one locked hierarchy:
+
+```bash
+MPLCONFIGDIR=tmp/matplotlib-cache PYTHONPATH=src \
+  ../cubedynamics/.venv/bin/python scripts/run_final_state_audit.py
+```
+
+The fixed normalizations are predictively equivalent once area and recent area
+change are known. Full multivariate geometry improves future-area prediction,
+but does not improve the primary contemporaneous growth-deficit detector.
+Results and exact provenance are under `outputs/final_state_audit/`;
+interpretation is in `docs/FINAL_STATE_SCALE_PREDICTION_AUDIT.md`.
+
 Build the two empirical manuscript figures directly from those locked
 machine-readable validation outputs:
 
