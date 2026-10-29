@@ -37,6 +37,11 @@ PROMPT_LOG.md         Prompt-to-change history for substantive agent work
 
 Large data files, animation frames, and rendered outputs should stay out of git unless they are intentionally curated for the website under `docs/assets/`.
 
+The [NSF X-Labs RFI vetting](docs/XLABS_RFI_VETTING.md) converts the locked
+scaling, detection, and prediction evidence into a prospective platform design
+with verified claims, proposal-facing metrics, sample-size calculations, and
+explicit limits on what the current satellite data establish.
+
 ## Mathematical SI Companion
 
 The `fire_metabolism` package reproduces the mathematical Supplementary Information as identities, conditional derivations, explicit constructions, counterexamples, and hypothetical worked examples. It deliberately does not treat passing algebra or numerical tests as evidence that wildfire has a `2/3` perimeter-area exponent or that wildfire is metabolic.

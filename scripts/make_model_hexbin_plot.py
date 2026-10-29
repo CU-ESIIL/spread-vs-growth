@@ -241,11 +241,11 @@ def write_hexbin_plot(
     add_power_law_line(
         ax,
         x,
-        coefficient=10.0**fit_alpha,
+        coefficient=1.0,
         exponent=0.5,
         color="#b22222",
         linestyle=(0, (8, 5)),
-        label=r"diffusion-like spread: $P \propto A^{1/2}$",
+        label=r"origin-constrained: $P = A^{1/2}$",
     )
     add_power_law_line(
         ax,

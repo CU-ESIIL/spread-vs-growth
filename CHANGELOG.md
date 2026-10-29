@@ -1,5 +1,49 @@
 # Changelog
 
+## 2026-10-27 - Fire geometry results poster
+
+- Added a reproducible 36 x 24 inch landscape poster synthesizing the locked
+  FIRED scaling, whole-fire state, life-cycle, and held-out prediction results.
+- Redrew the within-versus-between estimator comparison and all poster text as
+  vector elements while retaining high-resolution empirical and conceptual
+  panels from their authoritative outputs.
+- Put the empirical support and unmeasured mechanisms on the same page so the
+  central prediction result remains visually strong without turning
+  two-thirds into a universal individual growth law.
+- Revised the central comparison to place the observed FIRED exponent `0.646`
+  directly beside the summer smooth-front model cloud exponent `0.506`, with
+  individual ellipse, normal-front level-set, cellular, and Huygens estimates.
+- Added the heterogeneous amplified-front exception explicitly so the poster
+  distinguishes the baseline model result from a universal mechanism claim.
+- Added PDF metadata, print-scale rendering checks, source-panel documentation,
+  and a restartable poster build script.
+- Added a second poster variant with dimensionless centered regressions, making
+  the common zero intercept explicit while separating the observed `0.646`
+  slope from the smooth-front benchmark `0.506` slope.
+- Integrated the detection/prediction state schematic and held-out forecast
+  results into the centered-regression poster without treating residuals as
+  causal labels.
+- Simplified the second poster to a white, minimally framed layout and moved
+  both regression comparisons to low-scale relative coordinates where the
+  one-half, two-thirds, and fitted lines visibly share the `(0,0)` origin.
+
+## 2026-10-26 - NSF X-Labs RFI quantitative and architecture audit
+
+- Verified the draft's NIFC, fast-fire, Rothermel, FARSITE, and X-Labs framing
+  against primary sources and documented the necessary qualifications.
+- Reconciled pooled, within-fire, and between-fire scaling estimates and
+  corrected the draft's claim that locked adversarial-validation artifacts
+  were absent.
+- Added a reproducible audit that exports proposal-facing forecast metrics,
+  transition performance, portal character counts, rare-event prevalence, and
+  paired prospective sample-size approximations from locked outputs.
+- Found that 100 incidents can support one pooled seven-day geometry comparison
+  but cannot validate five regimes or rare outcomes; recommended a nested
+  100-incident primary test and 300-plus incident benchmark.
+- Reframed the Wildfire State Observatory as measurement/reference,
+  prospective-testbed, and controlled-mechanism tracks with explicit evidence
+  tiers, endpoints, and falsification boundaries.
+
 ## 2026-10-09 - Detection and prediction conceptual figure
 
 - Added a deterministic two-panel schematic explaining how the theory uses a
@@ -219,7 +263,7 @@
 - Added a flatter perspective fire-growth explainer across grassland, forest, and WUI contexts using the calibrated two-thirds footprint.
 - Added an option to hide the `2/3` and `3/4` reference lines in dense model hexbin plots and regenerated the no-level-set comparison.
 - Added a no-level-set model hexbin reveal animation that accumulates the model cloud from left to right while keeping only the `1/2` reference and fitted-slope lines.
-- Corrected the no-level-set hexbin `1/2` reference line to share the fitted model-cloud intercept, while keeping exponent `0.5`; the model-fit line uses the fitted log-log intercept and slope.
+- Corrected the no-level-set hexbin `1/2` reference to the explicit zero-intercept normalization `P = A^(1/2)`; the separate model-fit line retains its fitted intercept and slope.
 - Added a data-free red/blue reference-line MP4 that draws only the `1/2` and `2/3` perimeter-area scaling lines.
 - Updated the reference-line MP4 so the red `1/2` line is present from the first frame and the thicker blue `2/3` line animates on.
 - Added a helper to overlay the blue `2/3` reference line onto an existing event-hexbin PNG.

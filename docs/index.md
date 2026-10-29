@@ -100,3 +100,15 @@ The [detection and prediction concept figure](DETECTION_PREDICTION_CONCEPT_FIGUR
 translates that evidence boundary into a publication schematic: realization
 residuals detect a changed trajectory without attributing cause, while mapped
 geometry and recent dynamics narrow rather than determine near-term futures.
+
+The [NSF X-Labs RFI vetting](XLABS_RFI_VETTING.md) translates the locked
+evidence into a prospective platform design. It verifies external statistics,
+reconciles the pooled, within-fire, and between-fire exponents, quantifies
+forecast effect sizes and prospective sample needs, and separates the core
+prediction test from controlled-burn mechanism work and exploratory rare-event
+claims.
+
+The [fire geometry results poster](results-poster.md) presents the strongest
+visual synthesis at print scale: population geometry, the whole-fire state
+hypothesis, and held-out future-area and acceleration prediction, with the
+current evidence boundary printed directly on the poster.

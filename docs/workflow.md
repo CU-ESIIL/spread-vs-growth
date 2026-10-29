@@ -47,6 +47,8 @@ Use the repository as the reproducible control layer and keep large generated ar
 - `scripts/extract_fired_gridmet_sequences.py` extracts daily gridMET weather for FIRED event centroids from the documented local cache.
 - `scripts/run_fired_missing_process_tests.py` tests past weather, a newly burned-boundary active-front proxy, observed next-day weather as an oracle diagnostic, terminal weather changes, and observation-window sensitivity under `outputs/fired_missing_processes/`.
 - `scripts/build_full_prediction_evidence_report.py` assembles the complete empirical and synthetic prediction evidence into `output/pdf/fire_prediction_evidence_report.pdf`.
+- `scripts/audit_xlabs_rfi.py` reconciles locked scaling estimands, exports proposal-facing held-out metrics, estimates prospective paired sample sizes, audits rare-event feasibility, and checks RFI response character counts under `outputs/xlabs_rfi_audit/`.
+- `scripts/build_results_poster.py` composes the locked geometric-scaling, life-cycle, conditional-future, and held-out prediction results into a print-ready 36 x 24 inch PDF under `output/pdf/`.
 
 The SI reproduction layer uses no external wildfire observations. Its claim ledger explicitly separates mathematical checks from empirical hypotheses.
 

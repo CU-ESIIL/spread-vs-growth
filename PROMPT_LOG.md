@@ -2,6 +2,69 @@
 
 This file records substantive user prompts and the repository changes made in response. Keep entries concise, factual, and useful for reconstructing project intent.
 
+## 2026-10-27
+
+### Prompt
+
+> Create a high-resolution PDF poster showing the prettiest results from the
+> repository.
+
+### Response Summary
+
+- Built a 36 x 24 inch landscape poster around three visual claims: population
+  geometry, the whole-fire state hypothesis, and held-out prediction.
+- Combined locked geometric-manifold, life-cycle, conditional-future, and
+  prediction panels with a new vector within-versus-between comparison.
+- Highlighted the 4,032-fire cohort, `0.646` between-fire exponent, 13.3%
+  seven-day skill gain, and 0.790 acceleration balanced accuracy.
+- Included a prominent evidence boundary distinguishing replicated satellite
+  results from active-boundary, fuel, energetic, suppression, and prospective
+  validation gaps.
+- Added a reproducible builder, print-size documentation, and rendered visual
+  QA before delivery.
+
+### Prompt
+
+> Clean up the poster so the regression clearly shows that observed fire data
+> match the two-thirds line while the existing summer model benchmarks predict
+> the one-half line.
+
+### Response Summary
+
+- Rebuilt the poster's first two columns as a direct observed-versus-model
+  comparison: FIRED between-fire scaling `0.646` beside the baseline model
+  cloud `0.506`.
+- Reused the summer no-level-set model hexbin and added a vector slope summary
+  for exact ellipse, Huygens wavelets, normal-front level set, cellular
+  neighbor, and the pooled benchmark cloud.
+- Retained the within-fire `0.594` distinction and the heterogeneous
+  amplified-front exception so the figure does not turn the visual contrast
+  into an unsupported universal mechanism claim.
+
+## 2026-10-26
+
+### Prompt
+
+> Seriously vet the current NSF X-Labs RFI, verify claims, perform calculations
+> that improve the proposal, and audit the architecture, scope, and vision.
+
+### Response Summary
+
+- Audited all 28 RFI responses and confirmed that each remains below the
+  1,300-character portal limit.
+- Verified primary external statistics and historical model framing, then
+  identified qualifications needed for fast-fire, local-front, and scaling
+  claims.
+- Reconciled the locked FIRED population, within-fire, and between-fire
+  exponents and documented why they are distinct estimands rather than
+  conflicting results.
+- Added reproducible held-out forecast, transition, power, and rare-event
+  calculations; showed that 100 incidents are defensible for one pooled
+  seven-day test but not five regime-specific or rare-event claims.
+- Added a detailed proposal vetting document with revised architecture,
+  evidence tiers, primary endpoints, evidence boundaries, and suggested
+  replacements for the most consequential RFI responses.
+
 ## 2026-10-08
 
 ### Prompt
@@ -675,3 +738,52 @@ This file records substantive user prompts and the repository changes made in re
 - Added the conditional two-state closure, independent-measurement caveats,
   a manuscript-ready caption, provenance metadata, focused tests, website
   documentation, and reproduction instructions.
+
+### Prompt
+
+> The `1/2` line should be fixed at `0`.
+
+### Response Summary
+
+- Replaced the fitted-intercept one-half display with the explicit normalized
+  benchmark `log10(P) = 0.5 log10(A)`, whose intercept is exactly zero.
+- Kept the empirical/model fitted regression as a separate dotted line with
+  its own fitted intercept, preventing slope and normalization evidence from
+  being conflated.
+- Rebuilt the poster's FIRED and model scaling panels directly from the locked
+  datasets as vector graphics and updated the static/reveal plotting sources
+  to use the same one-half normalization.
+- Rebuilt and visually inspected the final 36 x 24 inch PDF poster.
+
+### Prompt
+
+> Try another poster that gets the regressions correct like the supplied
+> scaling references and incorporates the fire-geometry detection and
+> prediction figure.
+
+### Response Summary
+
+- Added a second 36 x 24 inch poster organized around normalized scaling,
+  geometric state, and held-out prediction.
+- Plotted FIRED fire-level means and smooth-front model outputs in centered,
+  dimensionless log coordinates so the one-half, two-thirds, and fitted lines
+  share an exact zero intercept and differ only in slope.
+- Verified the locked regression estimates of `0.646` for FIRED between-fire
+  geometry and `0.506` for the baseline model cloud.
+- Integrated the repository-native detection/prediction schematic, held-out
+  forecast panel, quantitative metrics, and evidence boundary.
+
+### Prompt
+
+> Make the regressions more like the supplied example, with both lines sharing
+> the origin, and use a white background with minimal formatting.
+
+### Response Summary
+
+- Replaced mean-centered regression coordinates with low-scale relative log
+  coordinates so the one-half, two-thirds, and fitted lines visibly begin at
+  `(0,0)` in both empirical panels.
+- Preserved the locked slopes while separating exponent comparison from raw
+  dimensional coefficients.
+- Removed tinted content panels and reduced the poster to a white background,
+  thin rules, sparse metric treatments, and the essential evidence hierarchy.
